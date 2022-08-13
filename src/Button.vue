@@ -44,16 +44,58 @@ export default {
     border-color: var(--button-border-color-hover);
     background-color: var(--button-bg-hover);
 
+    > .icon {
+      fill: var(--button-color-hover);
+      animation: jump 1s ease;
+    }
+
+    &.icon-right {
+      > .icon {
+        animation: jump-right 1s ease;
+      }
+    }
+
+    @keyframes jump {
+      0% {
+        transform: translateX(0%);
+      }
+
+      50% {
+        transform: translateX(-25%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes jump-right {
+      0% {
+        transform: translateX(0%);
+      }
+
+      50% {
+        transform: translateX(25%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
   }
+
 
   &:active {
     color: var(--button-color-border-active);
     border-color: var(--button-color-border-active);
   }
 
+
   > .icon {
     order: 1;
     margin-right: 0.3em;
+    transition: .1s;
   }
 
   > .content {
