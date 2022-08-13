@@ -7,29 +7,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BlitzUI</title>
     <style>
-        *{margin: 0;padding: 0;box-sizing: border-box;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        html{
-            --button-color:#606266;
-            --button-color-hover:#409eff;
-            --font-size:14px;
-            --button-line-height:1;
-            --button-bg:#fff;
-            --button-bg-hover:#ecf5ff;
-            --button-padding:12px 20px;
-            --button-border-radius:4px;
-            --button-border-color:#dcdfe6;
-            --button-border-color-hover:#c6e2ff;
-            --button-color-border-active:rgb(88,159,234)
+        html {
+            --button-color: #606266;
+            --button-color-hover: #409eff;
+            --font-size: 14px;
+            --button-line-height: 1;
+            --button-bg: #fff;
+            --button-bg-hover: #ecf5ff;
+            --button-padding: 12px 1em;
+            --button-border-radius: 4px;
+            --button-border-color: #dcdfe6;
+            --button-border-color-hover: #c6e2ff;
+            --button-color-border-active: rgb(88, 159, 234)
         }
     </style>
-
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-<bl-button></bl-button>
+    <bl-button>
+        我写的内容
+    </bl-button>
+    <bl-button icon="setting" icon-position="right">
+        我写的内容
+    </bl-button>
+    <bl-button icon="setting">
+        我写的内容
+    </bl-button>
 </div>
 
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/c/font_3586261_wvo3xrlg1p8.js"></script>
 </body>
 </html>
