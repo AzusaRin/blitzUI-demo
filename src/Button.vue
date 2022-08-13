@@ -52,7 +52,7 @@ export default {
   }
 
   > .icon {
-    order: 1;margin-right: 0.3em;transition: .1s;
+    order: 1;margin-right: 0.3em;
   }
   > .content {
     order: 2;
@@ -65,10 +65,10 @@ export default {
     }
     > .content {order: 1;
     }
-
   }
   .loading{
     animation: spin 1s infinite linear;
+    margin-right: 0.3em;
   }
 
   @keyframes spin {
