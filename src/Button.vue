@@ -1,8 +1,6 @@
 <template>
   <button class="bl-button" :class="{[`icon-${iconPosition}`]:true}">
-    <svg v-if="icon" class="icon">
-      <use :xlink:href="`#icon-${icon}`"></use>
-    </svg>
+    <bl-icon v-if="icon"  :name="icon"></bl-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -44,13 +42,13 @@ export default {
     border-color: var(--button-border-color-hover);
     background-color: var(--button-bg-hover);
 
-    > .icon {
+    > .bl-icon {
       fill: var(--button-color-hover);
       animation: jump 1s ease;
     }
 
     &.icon-right {
-      > .icon {
+      > .bl-icon {
         animation: jump-right 1s ease;
       }
     }
@@ -92,7 +90,7 @@ export default {
   }
 
 
-  > .icon {
+  > .bl-icon {
     order: 1;
     margin-right: 0.3em;
     transition: .1s;
@@ -103,7 +101,7 @@ export default {
   }
 
   &.icon-right {
-    > .icon {
+    > .bl-icon {
       order: 2;
       margin-left: 0.3em;
       margin-right: 0;
