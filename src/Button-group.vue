@@ -3,7 +3,17 @@
     <slot></slot>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  mounted() {
+    for (let node of this.$el.children){
+      if(node.nodeName.toLowerCase()!=='button'){
+        console.warn(`请注意bl-button-group 的子元素只能是bl-button，否则可能会发生样式错误。现在子元素是${node.nodeName.toLowerCase()}`)
+      }
+    }
+  }
+}
+</script>
 <style lang="scss">
 .bl-button-group {
   display: inline-flex;
