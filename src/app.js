@@ -18,6 +18,9 @@ new Vue({
 //单元测试
 
 import chai from 'chai'
+import spies from 'chai-spies'
+
+chai.use(spies);
 //测试setting
 {
     const Constructor = Vue.extend(Button)
@@ -88,11 +91,11 @@ chai.expect(window.getComputedStyle(vm.$el.querySelector('svg')).order).to.eq('1
     const Constructor = Vue.extend(Button)
     const vm = new Constructor()
     vm.$mount()
-    vm.$on('click',function (){
-        console.log('点击成功')
-    })
+    const spy = chai.spy(function (){})
+    vm.$on('click',spy)
 
     vm.$el.click()
+    chai.expect(spy).to.have.been.called()
     vm.$el.remove()
     vm.$destroy()
 }
