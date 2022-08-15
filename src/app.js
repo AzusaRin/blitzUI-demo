@@ -2,6 +2,8 @@ import Vue from "vue";
 import Button from "./Button";
 import Icon from "./Icon";
 import ButtonGroup from "./Button-group"
+import chai from 'chai'
+import spies from 'chai-spies'
 
 Vue.component('bl-button', Button)
 Vue.component('bl-icon', Icon)
@@ -17,85 +19,90 @@ new Vue({
 
 //单元测试
 
-import chai from 'chai'
-import spies from 'chai-spies'
-
 chai.use(spies);
+
+try {
 //测试setting
-{
-    const Constructor = Vue.extend(Button)
-    const vm = new Constructor({
-        propsData:{
-            icon:'setting'
-        }
-    })
-    vm.$mount()
+    {
+        const Constructor = Vue.extend(Button)
+        const vm = new Constructor({
+            propsData: {
+                icon: 'setting'
+            }
+        })
+        vm.$mount()
+        console.log(vm.$el.querySelector('use').getAttribute('xlink:href'));
+        chai.expect(vm.$el.querySelector('use').getAttribute('xlink:href')).to.eq('#icon-setting')
+        vm.$el.remove()
+        vm.$destroy()
 
-    chai.expect(vm.$el.querySelector('use').getAttribute('xlink:href')).to.eq('#icon-setting')
-    vm.$el.remove()
-    vm.$destroy()
-
-}
+    }
 //测试loading
-{
-    const Constructor = Vue.extend(Button)
-    const vm = new Constructor({
-        propsData:{
-            icon:'setting',
-            loading:true,
-        }
-    })
-    vm.$mount()
+    {
+        const Constructor = Vue.extend(Button)
+        const vm = new Constructor({
+            propsData: {
+                icon: 'setting',
+                loading: true,
+            }
+        })
+        vm.$mount()
 
-    chai.expect(vm.$el.querySelector('use').getAttribute('xlink:href')).to.eq('#icon-loading')
-    vm.$el.remove()
-    vm.$destroy()
-}
+        chai.expect(vm.$el.querySelector('use').getAttribute('xlink:href')).to.eq('#icon-loading')
+        vm.$el.remove()
+        vm.$destroy()
+    }
 //测试左右位置
-{
-    const div = document.createElement('div')
-    document.body.appendChild(div)
-    const Constructor = Vue.extend(Button)
-    const vm = new Constructor({
-        propsData:{
-            icon:'setting'
-        }
-    })
-    vm.$mount(div)
+    {
+        const div = document.createElement('div')
+        document.body.appendChild(div)
+        const Constructor = Vue.extend(Button)
+        const vm = new Constructor({
+            propsData: {
+                icon: 'setting'
+            }
+        })
+        vm.$mount(div)
 
-chai.expect(window.getComputedStyle(vm.$el.querySelector('svg')).order).to.eq('1')
+        chai.expect(window.getComputedStyle(vm.$el.querySelector('svg')).order).to.eq('1')
 
-    vm.$el.remove()
-    vm.$destroy()
-}
+        vm.$el.remove()
+        vm.$destroy()
+    }
 
-{
-    const div = document.createElement('div')
-    document.body.appendChild(div)
-    const Constructor = Vue.extend(Button)
-    const vm = new Constructor({
-        propsData:{
-            icon:'setting',
-            iconPosition:'right'
-        }
-    })
-    vm.$mount(div)
+    {
+        const div = document.createElement('div')
+        document.body.appendChild(div)
+        const Constructor = Vue.extend(Button)
+        const vm = new Constructor({
+            propsData: {
+                icon: 'setting',
+                iconPosition: 'right'
+            }
+        })
+        vm.$mount(div)
 
-    chai.expect(window.getComputedStyle(vm.$el.querySelector('svg')).order).to.eq('2')
+        chai.expect(window.getComputedStyle(vm.$el.querySelector('svg')).order).to.eq('2')
 
-    vm.$el.remove()
-    vm.$destroy()
-}
+        vm.$el.remove()
+        vm.$destroy()
+    }
 //测试@Click
-{
-    const Constructor = Vue.extend(Button)
-    const vm = new Constructor()
-    vm.$mount()
-    const spy = chai.spy(function (){})
-    vm.$on('click',spy)
-
-    vm.$el.click()
-    chai.expect(spy).to.have.been.called()
-    vm.$el.remove()
-    vm.$destroy()
+    {
+        const Constructor = Vue.extend(Button)
+        const vm = new Constructor()
+        vm.$mount()
+        const spy = chai.spy(function () {
+        })
+        vm.$on('click', spy)
+//希望spy被执行
+        vm.$el.click()
+        chai.expect(spy).to.have.been.called()
+        vm.$el.remove()
+        vm.$destroy()
+    }
+} catch (error) {
+    window.errors = [error]
+} finally {
+    window.errors && window.errors.forEach((error) => console.log(error.message))
 }
