@@ -33,7 +33,7 @@
     <bl-input ></bl-input>
     <bl-input  :disabled="true"></bl-input>
     <bl-input value="xxx" :readonly="true"></bl-input>
-    <bl-input error="输入不得少于x字"></bl-input>
+    <bl-input @change="inputChange"></bl-input>
     <div style="margin: 30px">
     <bl-button>
         我写的内容
