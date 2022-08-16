@@ -14,11 +14,8 @@ new Vue({
     data:{
         loading1:true,
         loading2:true,
+        message:'你好'
     },
-    methods:{
-        inputChange(event){
-            console.log(event.target.value)
-        }
-    }
+
 })
 

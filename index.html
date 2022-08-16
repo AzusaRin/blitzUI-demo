@@ -33,7 +33,8 @@
     <bl-input ></bl-input>
     <bl-input  :disabled="true"></bl-input>
     <bl-input value="xxx" :readonly="true"></bl-input>
-    <bl-input @change="inputChange"></bl-input>
+    <bl-input v-model="message"></bl-input>
+    <span>{{message}}</span>
     <div style="margin: 30px">
     <bl-button>
         我写的内容
