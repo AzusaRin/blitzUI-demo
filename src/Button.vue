@@ -1,6 +1,6 @@
 <template>
   <button  class="bl-button" :class="{[`icon-${iconPosition}`]:true}"  @click="$emit('click')">
-    <bl-icon v-if="icon"   class="icon && !loading" :name="icon"></bl-icon>
+    <bl-icon v-if="icon && !loading"   class="icon" :name="icon"></bl-icon>
     <bl-icon v-if="loading"   class="loading" name="loading"></bl-icon>
     <div class="content">
       <slot></slot>
@@ -8,9 +8,11 @@
   </button>
 </template>
 <script>
-
+import Icon from "./Icon";
 export default {
-
+components:{
+  'bl-icon':Icon
+},
   props: {
     icon: {},
     loading:{

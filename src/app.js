@@ -108,7 +108,9 @@ try {
 }catch (error) {
     window.errors = [error]
 } finally {
+if(window.errors){
     window.errors.forEach((error) => {
         console.error(error.message)
     })
+}
 }
