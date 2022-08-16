@@ -29,7 +29,12 @@
     </style>
 </head>
 <body>
-<div id="app">
+<div id="app" style="margin: 30px">
+    <bl-input ></bl-input>
+    <bl-input  :disabled="true"></bl-input>
+    <bl-input value="xxx" :readonly="true"></bl-input>
+    <bl-input error="输入不得少于x字"></bl-input>
+    <div style="margin: 30px">
     <bl-button>
         我写的内容
     </bl-button>
@@ -50,6 +55,7 @@
         <bl-button>更多</bl-button>
         <bl-button icon="right" icon-position="right">下一页</bl-button>
     </bl-button-group>
+    </div>
 </div>
 
 <script src="./src/app.js"></script>

@@ -10,6 +10,7 @@
 <script>
 import Icon from "./Icon";
 export default {
+  name:'BlitzButton',
 components:{
   'bl-icon':Icon
 },
@@ -29,7 +30,7 @@ components:{
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .bl-button {
   color: var(--button-color);font-size: var(--font-size);line-height: var(--button-line-height);background-color: var(--button-bg);
   padding: var(--button-padding);border: 1px solid var(--button-border-color);border-radius: var(--button-border-radius);

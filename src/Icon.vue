@@ -6,10 +6,11 @@
 <script>
 import './svg'
 export default {
+  name:'BlitzIcon',
   props:['name']
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .bl-icon{
   width: 1em;
   height: 1em;
