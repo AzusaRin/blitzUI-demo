@@ -1,8 +1,8 @@
 {
-  "name": "blitz_ui",
-  "version": "0.0.1",
+  "name": "blitz-test-demo-1",
+  "version": "0.0.3",
   "description": "这是一个Vue的UI框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "built": "parcel build test/*  --no-cache --no-minify  ",
