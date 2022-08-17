@@ -27,10 +27,26 @@
             --button-color-border-active: rgb(88, 159, 234)
         }
     </style>
+
 </head>
 <body>
 <div id="app" style="margin: 30px">
-    <bl-input ></bl-input>
+<bl-row>
+    <bl-col>1</bl-col>
+    <bl-col>2</bl-col>
+</bl-row>
+    <bl-row>
+        <bl-col>1</bl-col>
+        <bl-col>2</bl-col>
+        <bl-col>3</bl-col>
+    </bl-row>
+    <bl-row>
+        <bl-col span="1">1</bl-col>
+        <bl-col span="6">2</bl-col>
+        <bl-col span="10">3</bl-col>
+        <bl-col span="7">4</bl-col>
+    </bl-row>
+    <bl-input error="不太行！"></bl-input>
     <bl-input  :disabled="true"></bl-input>
     <bl-input value="xxx" :readonly="true"></bl-input>
     <bl-input v-model="message"></bl-input>
