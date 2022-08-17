@@ -28,47 +28,22 @@
         }
     </style>
 <style>
-    .demo{
-        min-height: 60px;
-        background: #409eff;
-        border: 1px solid black;
-    }
+.demo{
+    background: #409eff;
+    height: 60px;
+    border: 1px solid black;
+}
 </style>
 </head>
 <body>
 <div id="app" style="margin: 30px">
-    <bl-row class="topbar">
-        <bl-col class="demo" span="9">
-            <bl-row align="right">
-                <bl-col>1</bl-col>
-                <bl-col>2</bl-col>
-                <bl-col>3</bl-col>
-                <bl-col>4</bl-col>
-            </bl-row>
-        </bl-col>
-        <bl-col class="demo" span="15">2</bl-col>
-    </bl-row>
-    <bl-row class="logo">
-        <bl-col class="demo" span="4">1</bl-col>
-        <bl-col class="demo" span="14">2</bl-col>
-        <bl-col class="demo" span="6">2</bl-col>
-    </bl-row>
+
     <div style="border: 1px solid black">
-<bl-row :gutter="10">
-    <bl-col>1</bl-col>
-    <bl-col>2</bl-col>
+<bl-row>
+    <bl-col :span="24" :pad="{span:12}" :small-device="{span:8}" :middle-device="{span:4,offset:1}">
+        <div class="demo"></div>
+    </bl-col>
 </bl-row>
-    <bl-row>
-        <bl-col>1</bl-col>
-        <bl-col>2</bl-col>
-        <bl-col>3</bl-col>
-    </bl-row>
-    <bl-row >
-        <bl-col span="5" >1</bl-col>
-        <bl-col span="5" offset="1">2</bl-col>
-        <bl-col span="9" offset="1">3</bl-col>
-        <bl-col span="8" offset="1">4</bl-col>
-    </bl-row>
     </div>
     <bl-input error="不太行！"></bl-input>
     <bl-input  :disabled="true"></bl-input>
