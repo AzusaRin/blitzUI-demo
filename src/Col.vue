@@ -1,9 +1,7 @@
 <template>
   <div class="col" :class="colClass"
   :style="colStyle">
-    <div class="content">
     <slot></slot>
-    </div>
   </div>
 </template>
 <script>
@@ -39,25 +37,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .col {
-  height: 100%;
-  width: 100%;
-.content{
-  height: 60px;
-}
-
-  &:nth-child(odd) .content {
-    background: rgb(140, 197, 255);
-  }
-
-  &:nth-child(even) .content {
-    background: #409EFF;
-  }
 
   $class: col-;
   @for $n from 1 through 24 {
     &.#{$class}#{$n} {
       width: ($n/24)*100%;
     }
+  }
     $class: offset-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
@@ -65,5 +51,5 @@ export default {
       }
     }
   }
-}
+
 </style>
