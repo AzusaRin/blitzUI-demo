@@ -1,6 +1,9 @@
 <template>
-  <div class="col" :class="[`col-${span}`]">
+  <div class="col" :class="[span && `col-${span}`,offset && `offset-${offset}`]"
+  :style="{paddingLeft:gutter/2+'px',paddingRight:gutter/2+'px'}">
+    <div class="content">
     <slot></slot>
+    </div>
   </div>
 </template>
 <script>
@@ -9,20 +12,31 @@ export default {
   props: {
     span: {
       type: [String, Number]
-    }
+    },
+    offset: {
+      type: [String, Number]
+    },
   },
+  data(){
+    return{
+      gutter:0
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
 .col {
-  height: 60px;
+  height: 100%;
   width: 100%;
+.content{
+  height: 60px;
+}
 
-  &:nth-child(odd) {
+  &:nth-child(odd) .content {
     background: rgb(140, 197, 255);
   }
 
-  &:nth-child(even) {
+  &:nth-child(even) .content {
     background: #409EFF;
   }
 
@@ -30,6 +44,12 @@ export default {
   @for $n from 1 through 24 {
     &.#{$class}#{$n} {
       width: ($n/24)*100%;
+    }
+    $class: offset-;
+    @for $n from 1 through 24 {
+      &.#{$class}#{$n} {
+        margin-left: ($n/24)*100%;
+      }
     }
   }
 }

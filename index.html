@@ -31,7 +31,8 @@
 </head>
 <body>
 <div id="app" style="margin: 30px">
-<bl-row>
+    <div style="border: 1px solid black">
+<bl-row :gutter="10">
     <bl-col>1</bl-col>
     <bl-col>2</bl-col>
 </bl-row>
@@ -40,12 +41,13 @@
         <bl-col>2</bl-col>
         <bl-col>3</bl-col>
     </bl-row>
-    <bl-row>
-        <bl-col span="1">1</bl-col>
-        <bl-col span="6">2</bl-col>
-        <bl-col span="10">3</bl-col>
-        <bl-col span="7">4</bl-col>
+    <bl-row >
+        <bl-col span="5" >1</bl-col>
+        <bl-col span="5" offset="1">2</bl-col>
+        <bl-col span="9" offset="1">3</bl-col>
+        <bl-col span="8" offset="1">4</bl-col>
     </bl-row>
+    </div>
     <bl-input error="不太行！"></bl-input>
     <bl-input  :disabled="true"></bl-input>
     <bl-input value="xxx" :readonly="true"></bl-input>
