@@ -27,51 +27,58 @@
             --button-color-border-active: rgb(88, 159, 234)
         }
     </style>
-<style>
-.demo{
-    background: #409eff;
-    height: 60px;
-    border: 1px solid black;
-}
-</style>
+    <style>
+        .demo {
+            background: #409eff;
+            min-height: 100px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
 <div id="app" style="margin: 30px">
-
-    <div style="border: 1px solid black">
-<bl-row>
-    <bl-col :span="24" :pad="{span:12}" :small-device="{span:8}" :middle-device="{span:4,offset:1}">
-        <div class="demo"></div>
-    </bl-col>
-</bl-row>
-    </div>
-    <bl-input error="不太行！"></bl-input>
-    <bl-input  :disabled="true"></bl-input>
-    <bl-input value="xxx" :readonly="true"></bl-input>
-    <bl-input v-model="message"></bl-input>
-    <span>{{message}}</span>
-    <div style="margin: 30px">
-    <bl-button>
-        我写的内容
-    </bl-button>
-    <bl-button icon="setting" icon-position="right">
-        我写的内容
-    </bl-button>
-    <bl-button icon="setting" >
-        我写的内容
-    </bl-button>
-    <bl-button :loading="loading1"  icon="setting"  @click="loading1 = !loading1">
-        我写的内容
-    </bl-button>
-    <bl-button :loading="loading2" icon-position="right"  @click="loading2 = !loading2">
-        我写的内容
-    </bl-button>
-    <bl-button-group>
-        <bl-button icon="left">上一页</bl-button>
-        <bl-button>更多</bl-button>
-        <bl-button icon="right" icon-position="right">下一页</bl-button>
-    </bl-button-group>
-    </div>
+    <bl-layout style="height: 100vh">
+        <bl-header class="demo">header</bl-header>
+        <bl-layout >
+            <bl-sider class="demo">sider</bl-sider>
+            <bl-content class="demo">content</bl-content>
+        </bl-layout>
+        <bl-footer class="demo">footer</bl-footer>
+    </bl-layout>
+    <!--    <div style="border: 1px solid black">-->
+    <!--<bl-row>-->
+    <!--    <bl-col :span="24" :pad="{span:12}" :small-device="{span:8}" :middle-device="{span:4,offset:1}">-->
+    <!--        <div class="demo"></div>-->
+    <!--    </bl-col>-->
+    <!--</bl-row>-->
+    <!--    </div>-->
+    <!--    <bl-input error="不太行！"></bl-input>-->
+    <!--    <bl-input  :disabled="true"></bl-input>-->
+    <!--    <bl-input value="xxx" :readonly="true"></bl-input>-->
+    <!--    <bl-input v-model="message"></bl-input>-->
+    <!--    <span>{{message}}</span>-->
+    <!--    <div style="margin: 30px">-->
+    <!--    <bl-button>-->
+    <!--        我写的内容-->
+    <!--    </bl-button>-->
+    <!--    <bl-button icon="setting" icon-position="right">-->
+    <!--        我写的内容-->
+    <!--    </bl-button>-->
+    <!--    <bl-button icon="setting" >-->
+    <!--        我写的内容-->
+    <!--    </bl-button>-->
+    <!--    <bl-button :loading="loading1"  icon="setting"  @click="loading1 = !loading1">-->
+    <!--        我写的内容-->
+    <!--    </bl-button>-->
+    <!--    <bl-button :loading="loading2" icon-position="right"  @click="loading2 = !loading2">-->
+    <!--        我写的内容-->
+    <!--    </bl-button>-->
+    <!--    <bl-button-group>-->
+    <!--        <bl-button icon="left">上一页</bl-button>-->
+    <!--        <bl-button>更多</bl-button>-->
+    <!--        <bl-button icon="right" icon-position="right">下一页</bl-button>-->
+    <!--    </bl-button-group>-->
+    <!--    </div>-->
 </div>
 
 <script src="./src/app.js"></script>
