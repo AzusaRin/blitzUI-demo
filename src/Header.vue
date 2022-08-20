@@ -9,7 +9,5 @@ name:'BlitzHeader',
 }
 </script>
 <style lang="scss" scoped>
-.header{
 
-}
 </style>

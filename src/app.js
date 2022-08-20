@@ -10,6 +10,8 @@ import Header from "./Header"
 import Sider from "./Sider"
 import Content from "./Content"
 import Footer from "./Footer"
+import Toast from "./Toast";
+import toastPlugin from "./toastPlugin";
 
 Vue.component('bl-button',Button)
 Vue.component('bl-icon',Icon)
@@ -22,6 +24,8 @@ Vue.component('bl-header',Header)
 Vue.component('bl-sider',Sider)
 Vue.component('bl-content',Content)
 Vue.component('bl-footer',Footer)
+Vue.component('bl-toast',Toast)
+Vue.use(toastPlugin)
 new Vue({
     el:'#app',
 
@@ -30,6 +34,11 @@ new Vue({
         loading2:true,
         message:'你好'
     },
+methods:{
+        showToast(){
+            this.$toast('我是message')
+        }
+}
 
 })
 
