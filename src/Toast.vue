@@ -1,5 +1,5 @@
 <template>
-  <div class="toast" ref="toast">
+  <div class="toast" ref="toast" :class="toastClass">
     <slot v-if="!enableHtml"></slot>
     <div v-else v-html="$slots.default[0]"></div>
     <div class="line" ref="line"></div>
@@ -16,11 +16,11 @@ export default {
     type: {},
     autoClose: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     duration: {
       type: Number,
-      default: 3
+      default: 5
     },
     closeButton: {
       type: Object,
@@ -33,11 +33,25 @@ export default {
     enableHtml: {
       type: Boolean,
       default: false
+    },
+    position: {
+      type: String,
+      default: 'top',
+      validator(value) {
+        return ['top', 'middle', 'bottom'].includes(value)
+      }
     }
   },
   mounted() {
     this.execAutoClose()
     this.lineStyle()
+  },
+  computed: {
+    toastClass() {
+      return {
+        [`position-${this.position}`]: true
+      }
+    }
   },
   methods: {
     execAutoClose() {
@@ -70,19 +84,31 @@ export default {
 <style lang="scss" scoped>
 .toast {
   position: fixed;
-  top: 10px;
   left: 50%;
   border-radius: 4px;
   border: 1px solid #91d5ff;
   padding: 0 16px;
   font-size: 14px;
-  transform: translateX(-50%);
   color: #000000d9;
   background-color: #e6f7ff;
   display: flex;
   align-items: center;
   line-height: 1.8;
   min-height: 40px;
+
+&.position-top{
+  top:0;
+  transform: translateX(-50%);
+}
+  &.position-middle{
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+  &.position-bottom{
+    bottom:0;
+    transform: translateX(-50%);
+  }
+
 }
 
 .line {

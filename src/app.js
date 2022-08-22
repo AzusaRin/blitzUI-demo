@@ -13,38 +13,36 @@ import Footer from "./Footer"
 import Toast from "./Toast";
 import toastPlugin from "./toastPlugin";
 
-Vue.component('bl-button',Button)
-Vue.component('bl-icon',Icon)
-Vue.component('bl-button-group',ButtonGroup)
-Vue.component('bl-input',Input)
-Vue.component('bl-row',Row)
-Vue.component('bl-col',Col)
-Vue.component('bl-layout',Layout)
-Vue.component('bl-header',Header)
-Vue.component('bl-sider',Sider)
-Vue.component('bl-content',Content)
-Vue.component('bl-footer',Footer)
-Vue.component('bl-toast',Toast)
+Vue.component('bl-button', Button)
+Vue.component('bl-icon', Icon)
+Vue.component('bl-button-group', ButtonGroup)
+Vue.component('bl-input', Input)
+Vue.component('bl-row', Row)
+Vue.component('bl-col', Col)
+Vue.component('bl-layout', Layout)
+Vue.component('bl-header', Header)
+Vue.component('bl-sider', Sider)
+Vue.component('bl-content', Content)
+Vue.component('bl-footer', Footer)
+Vue.component('bl-toast', Toast)
 Vue.use(toastPlugin)
 new Vue({
-    el:'#app',
+    el: '#app',
 
-    data:{
-        loading1:true,
-        loading2:true,
-        message:'你好'
+    data: {
+        loading1: true,
+        loading2: true,
+        message: '你好'
     },
-methods:{
-        showToast(){
-            this.$toast('密码输入字段不得低于八个密码输入字段不得低于八个密码输入字段不得低于八个密码输入字段不得低于八个密码输入字段不得低于八个密码输入字段不得低于八个',{
-                closeButton: {
-                    callback(){
-                        console.log('ok');
-                    }
-                }
+    methods: {
+        showToast() {
+            this.$toast('密码输入字段不得低于八个', {
+                    duration: 20,
+                    position: 'middle',
+                    autoClose: false
             })
         }
-}
+    }
 
 })
 
