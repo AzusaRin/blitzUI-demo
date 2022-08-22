@@ -36,7 +36,13 @@ new Vue({
     },
 methods:{
         showToast(){
-            this.$toast('我是message')
+            this.$toast('密码输入字段不得低于八个密码输入字段不得低于八个密码输入字段不得低于八个密码输入字段不得低于八个密码输入字段不得低于八个密码输入字段不得低于八个',{
+                closeButton: {
+                    callback(){
+                        console.log('ok');
+                    }
+                }
+            })
         }
 }
 
