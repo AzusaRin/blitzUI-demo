@@ -1,11 +1,13 @@
 <template>
-  <div class="toast" ref="toast" :class="toastClass">
-    <slot v-if="!enableHtml"></slot>
-    <div v-else v-html="$slots.default[0]"></div>
-    <div class="line" ref="line"></div>
-    <span v-if="closeButton" class="close" @click="onClickClose">
+  <div class="wrapper" :class="toastClass">
+    <div class="toast" ref="toast" >
+      <slot v-if="!enableHtml"></slot>
+      <div v-else v-html="$slots.default[0]"></div>
+      <div class="line" ref="line"></div>
+      <span v-if="closeButton" class="close" @click="onClickClose">
       <bl-icon name="close" class="closeIcon"></bl-icon>
     </span>
+    </div>
   </div>
 </template>
 
@@ -83,9 +85,69 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.toast {
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.wrapper{
   position: fixed;
   left: 50%;
+  transform: translateX(-50%);
+
+  &.position-top {
+    top: 0;
+    .toast{
+      animation: slideTop .3s;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &.position-middle {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    .toast{
+      animation: fade .3s;
+    }
+  }
+
+  &.position-bottom {
+    bottom: 0;
+    .toast{
+      animation: slideBottom .3s;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+
+  }
+}
+
+.toast {
   border-radius: 4px;
   border: 1px solid #91d5ff;
   padding: 0 16px;
@@ -97,18 +159,7 @@ export default {
   line-height: 1.8;
   min-height: 40px;
 
-&.position-top{
-  top:0;
-  transform: translateX(-50%);
-}
-  &.position-middle{
-    top:50%;
-    transform: translate(-50%,-50%);
-  }
-  &.position-bottom{
-    bottom:0;
-    transform: translateX(-50%);
-  }
+
 
 }
 
