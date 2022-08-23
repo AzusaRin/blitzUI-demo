@@ -1,5 +1,4 @@
 import sinon from "sinon/pkg/sinon-esm";
-
 const expect = chai.expect;
 import Vue from 'vue'
 import Input from "../src/Input";

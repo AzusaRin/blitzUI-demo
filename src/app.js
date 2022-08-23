@@ -37,23 +37,20 @@ new Vue({
     methods: {
         showToast1() {
             this.$toast('密码输入字段不得低于八个', {
-                duration: 3,
-                position: 'top',
-                autoClose: true
+                position:'top',
+                closeButton:{}
             })
         },
         showToast2() {
             this.$toast('密码输入字段不得低于八个', {
-                duration: 3,
                 position: 'middle',
-                autoClose: true
+
             })
         },
         showToast3() {
             this.$toast('密码输入字段不得低于八个', {
-                    duration: 3,
                     position: 'bottom',
-                    autoClose: true
+
             })
         }
     }
