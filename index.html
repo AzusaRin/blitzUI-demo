@@ -31,9 +31,34 @@
 </head>
 <body>
 <div id="app">
-    <button @click="showToast1">11</button>
-    <button @click="showToast2">22</button>
-    <button @click="showToast3">33</button>
+    <bl-tabs :selected.sync="selectedTab">
+        <bl-tabs-head>
+            <template slot="action">
+                <button>action</button>
+            </template>
+            <bl-tabs-item name="1">
+                我是1
+            </bl-tabs-item>
+            <bl-tabs-item name="2">
+                我是2
+            </bl-tabs-item>
+            <bl-tabs-item name="3">
+                我是3
+            </bl-tabs-item>
+        </bl-tabs-head>
+        <bl-tabs-body>
+            <bl-tabs-panel name="1">
+                1的相关信息
+            </bl-tabs-panel>
+            <bl-tabs-panel name="2">
+                2的相关信息
+            </bl-tabs-panel>
+            <bl-tabs-panel name="3">
+                3的相关信息
+            </bl-tabs-panel>
+        </bl-tabs-body>
+
+    </bl-tabs>
 </div>
 <script src="./src/app.js"></script>
 </body>

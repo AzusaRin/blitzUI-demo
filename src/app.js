@@ -12,6 +12,13 @@ import Content from "./Content"
 import Footer from "./Footer"
 import Toast from "./Toast";
 import toastPlugin from "./toastPlugin";
+import Tabs from "./Tabs";
+import TabsBody from "./Tabs-body";
+import TabsHead from "./Tabs-head";
+import TabsPanel from "./Tabs-panel";
+import TabsItem from "./Tabs-item";
+
+Vue.use(toastPlugin)
 
 Vue.component('bl-button', Button)
 Vue.component('bl-icon', Icon)
@@ -26,34 +33,19 @@ Vue.component('bl-content', Content)
 Vue.component('bl-footer', Footer)
 Vue.component('bl-toast', Toast)
 Vue.use(toastPlugin)
+Vue.component('bl-tabs', Tabs)
+Vue.component('bl-tabs-body', TabsBody)
+Vue.component('bl-tabs-head', TabsHead)
+Vue.component('bl-tabs-panel', TabsPanel)
+Vue.component('bl-tabs-item', TabsItem)
+
 new Vue({
     el: '#app',
 
     data: {
-        loading1: true,
-        loading2: true,
-        message: '你好'
+        selectedTab: '1'
     },
-    methods: {
-        showToast1() {
-            this.$toast('密码输入字段不得低于八个', {
-                position:'top',
-                closeButton:{}
-            })
-        },
-        showToast2() {
-            this.$toast('密码输入字段不得低于八个', {
-                position: 'middle',
-
-            })
-        },
-        showToast3() {
-            this.$toast('密码输入字段不得低于八个', {
-                    position: 'bottom',
-
-            })
-        }
-    }
+    methods: {}
 
 })
 
