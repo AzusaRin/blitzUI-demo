@@ -6,7 +6,8 @@
 
 <script>
 export default {
-  name:'BlitzTabsBody'
+  name:'BlitzTabsBody',
+  inject:['eventHub']
 }
 </script>
 
