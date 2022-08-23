@@ -43,7 +43,7 @@ new Vue({
     el: '#app',
 
     data: {
-        selected: '1'
+        selected: '2'
     },
     methods: {}
 

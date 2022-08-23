@@ -29,11 +29,19 @@ export default {
   },
   provide() {
     return {
-      eventHub : this.eventHub
+      eventHub: this.eventHub
     }
   },
   mounted() {
-    this.eventHub.$emit('update:selected',this.selected)
+    this.$children.forEach(head => {
+      if (head.$options.name === 'BlitzTabsHead') {
+        head.$children.forEach(child => {
+          if (child.$options.name === 'BlitzTabsItem' && child.name === this.selected) {
+            this.eventHub.$emit('update:selected', this.selected,child)
+          }
+        })
+      }
+    })
   }
 }
 </script>

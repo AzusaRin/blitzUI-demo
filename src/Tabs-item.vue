@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     xxx() {
-      this.eventHub.$emit('update:selected', this.name)
+      this.eventHub.$emit('update:selected', this.name,this)
     }
   },
   created() {
@@ -45,11 +45,17 @@ export default {
 
 <style lang="scss" scoped>
 .tabs-item {
-  padding: 0 2em;
+ margin: 0 14px;
+  &:first-child{
+    margin-left:0 ;
+  }
   flex-shrink: 0;
-
+cursor: pointer;
+  height: 100%;
+  align-items: center;
+  display: flex;
   &.active{
-    background: red;
+    color: #409eff;
   }
 }
 </style>
