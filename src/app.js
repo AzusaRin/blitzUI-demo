@@ -17,8 +17,9 @@ import TabsBody from "./Tabs-body";
 import TabsHead from "./Tabs-head";
 import TabsPanel from "./Tabs-panel";
 import TabsItem from "./Tabs-item";
+import Popover from "./Popover";
 
-Vue.use(toastPlugin)
+
 
 Vue.component('bl-button', Button)
 Vue.component('bl-icon', Icon)
@@ -38,6 +39,7 @@ Vue.component('bl-tabs-body', TabsBody)
 Vue.component('bl-tabs-head', TabsHead)
 Vue.component('bl-tabs-panel', TabsPanel)
 Vue.component('bl-tabs-item', TabsItem)
+Vue.component('bl-popover', Popover)
 
 new Vue({
     el: '#app',

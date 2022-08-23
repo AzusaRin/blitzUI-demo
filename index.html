@@ -30,35 +30,13 @@
 
 </head>
 <body>
-<div id="app">
-    <bl-tabs :selected.sync="selected" >
-        <bl-tabs-head>
-            <template slot="action">
-                <button>action</button>
-            </template>
-            <bl-tabs-item name="1">
-                我是11111111111111
-            </bl-tabs-item>
-            <bl-tabs-item name="2">
-                我是2222
-            </bl-tabs-item>
-            <bl-tabs-item name="3">
-                我是33
-            </bl-tabs-item>
-        </bl-tabs-head>
-        <bl-tabs-body>
-            <bl-tabs-panel name="1">
-                1的相关信息
-            </bl-tabs-panel>
-            <bl-tabs-panel name="2">
-                2的相关信息
-            </bl-tabs-panel>
-            <bl-tabs-panel name="3">
-                3的相关信息
-            </bl-tabs-panel>
-        </bl-tabs-body>
-
-    </bl-tabs>
+<div id="app" style="padding:100px">
+  <bl-popover>
+      <template slot="content">
+          <div>popover内容</div>
+      </template>
+          <button>点我</button>
+  </bl-popover>
 </div>
 <script src="./src/app.js"></script>
 </body>
