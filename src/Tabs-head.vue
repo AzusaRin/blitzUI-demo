@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-head">
+  <div class="tabs-head" >
     <slot></slot>
     <div class="line" ref="line"></div>
     <div class="action-wrapper">
@@ -15,10 +15,10 @@ export default {
   mounted() {
     this.eventHub.$on('update:selected', (item, child) => {
       let {width,left} = child.$el.getBoundingClientRect()
-      this.$refs.line.style.width = `${width}px`
-      this.$refs.line.style.left=`${left}px`
+        this.$refs.line.style.left=`${left}px`
+        this.$refs.line.style.width = `${width}px`
     })
-  }
+  },
 }
 </script>
 
@@ -29,6 +29,7 @@ export default {
   justify-content: flex-start;
   position: relative;
   border-bottom: 1px solid #ddd;
+
 
 
   > .line {
@@ -45,5 +46,6 @@ export default {
     align-items: center;
     padding: 0 1em;
   }
+
 }
 </style>

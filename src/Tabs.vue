@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs">
+  <div class="tabs" :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -14,25 +14,26 @@ export default {
       type: String,
       required: true
     },
-    direction: {
-      type: String,
-      default: 'horizontal',
-      validator(value) {
-        return ['horizontal', 'vertical'].includes(value)
-      }
-    }
   },
   data() {
     return {
       eventHub: new Vue()
     }
   },
+
   provide() {
     return {
       eventHub: this.eventHub
     }
   },
+
+
   mounted() {
+    if(this.$children.length === 0){
+     console && console.warn&&
+      console.warn('bl-tabs的子组件只能是bl-tabs-head和bl-tabs-body，现在没有子组件')
+    }
+    this.eventHub.$emit('directionChange',this.direction)
     this.$children.forEach(head => {
       if (head.$options.name === 'BlitzTabsHead') {
         head.$children.forEach(child => {
