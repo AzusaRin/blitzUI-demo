@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-item" @click="onClick" :class="classes" :data-name="name">
+  <div class="tabs-item" @click="onCilck" :class="classes" :data-name="name">
     <slot></slot>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
     }
   },
   methods: {
-    onClick() {
+    onCilck() {
       if (this.disabled === true) {
         return
       }
