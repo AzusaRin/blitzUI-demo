@@ -32,8 +32,9 @@
 <body>
 <div id="app" style="padding:300px">
     <bl-popover position="left">
-        <template slot="content">
+        <template slot="content" slot-scope="{close}">
             <div>popover内容</div>
+            <span @click="close">X</span>
         </template>
         <bl-button>啊哈哈哈哈</bl-button>
     </bl-popover>
@@ -51,6 +52,31 @@
     </bl-popover>
 
     <bl-popover position="right">
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <bl-button>啊哈哈哈哈</bl-button>
+    </bl-popover>
+    <bl-popover position="left" trigger="hover">
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <bl-button>啊哈哈哈哈</bl-button>
+    </bl-popover>
+    <bl-popover position="bottom" trigger="hover">
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <bl-button>啊哈哈哈哈</bl-button>
+    </bl-popover>
+    <bl-popover position="top" trigger="hover">
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <bl-button>啊哈哈哈哈</bl-button>
+    </bl-popover>
+
+    <bl-popover position="right" trigger="hover">
         <template slot="content">
             <div>popover内容</div>
         </template>
