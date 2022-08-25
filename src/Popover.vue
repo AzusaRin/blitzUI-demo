@@ -19,14 +19,14 @@ export default {
       type: String,
       default: 'top',
       validator(value) {
-        ['top', 'left', 'right', 'bottom'].includes(value)
+      return  ['top', 'left', 'right', 'bottom'].includes(value)
       }
     },
     trigger:{
       type: String,
       default: 'click',
       validator(value) {
-        ['click','hover'].includes(value)
+     return   ['click','hover'].includes(value)
       }
     },
   },
@@ -82,7 +82,6 @@ mounted(){
           this.$refs.contentWrapper.contains(event.target) || this.$refs.contentWrapper === event.target) {
         return;
       }
-      console.log(this.$refs.popover.contains(event.target));
       this.close()
     },
     setPopover() {
