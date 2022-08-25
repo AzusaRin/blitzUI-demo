@@ -34,4 +34,26 @@ describe('Popover', () => {
             })
         })
     })
+    it('可以设置trigger', (done) => {
+        Vue.component('bl-popover', Popover)
+        const div = document.createElement('div')
+        document.body.appendChild(div)
+        div.innerHTML = `
+     <bl-popover trigger="hover" ref="a">
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <button>点击</button>
+    </bl-popover>
+    `
+        const vm = new Vue({
+            el: div
+        })
+        let event = new Event('mouseenter')
+        vm.$refs.a.$refs.popover.dispatchEvent(event)
+            vm.$nextTick(() => {
+                expect(vm.$refs.a.$refs.contentWrapper).to.be.exist
+                done()
+            })
+    })
 })
