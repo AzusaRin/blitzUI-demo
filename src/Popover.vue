@@ -63,22 +63,31 @@ export default {
     },
     setPopover() {
       document.body.appendChild(this.$refs.contentWrapper)
-      let {top, left, height, width} = this.$refs.switchWrapper.getBoundingClientRect()
-      if (this.position === 'top') {
-        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
-        this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
-      } else if (this.position === 'bottom') {
-        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
-        this.$refs.contentWrapper.style.top = top + window.scrollY + height + 'px'
-      } else if (this.position === 'left') {
-        let {height: contentHeight} = this.$refs.contentWrapper.getBoundingClientRect()
-        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
-        this.$refs.contentWrapper.style.top = top + window.scrollY - (contentHeight- height  ) / 2 + 'px'
-      }else if(this.position==='right'){
-        let {height: contentHeight} = this.$refs.contentWrapper.getBoundingClientRect()
-        this.$refs.contentWrapper.style.left = left + window.scrollX+ width+ 'px'
-        this.$refs.contentWrapper.style.top = top + window.scrollY - (contentHeight- height  ) / 2 + 'px'
+      const {contentWrapper} = this.$refs
+      const {top, left, height, width} = this.$refs.switchWrapper.getBoundingClientRect()
+      const {height: contentHeight} = this.$refs.contentWrapper.getBoundingClientRect()
+
+      let positions = {
+        top: {
+          top: top + window.scrollY,
+          left: left + window.scrollX
+        },
+        bottom: {
+          top: top + window.scrollY + height,
+          left: left + window.scrollX
+        },
+        left: {
+          top: top + window.scrollY - (contentHeight - height) / 2,
+          left: left + window.scrollX
+        },
+        right: {
+          top: top + window.scrollY - (contentHeight - height) / 2,
+          left: left + window.scrollX + width
+        }
       }
+      contentWrapper.style.top = positions[this.position].top + 'px'
+      contentWrapper.style.left = positions[this.position].left + 'px'
+
 
     },
   },
@@ -181,13 +190,13 @@ export default {
       width: 0;
       height: 0;
       position: absolute;
-      top:50%;
+      top: 50%;
       transform: translateY(-50%);
     }
 
     &::before {
       border-left-color: #ebeef5;;
-      left:100%
+      left: 100%
 
     }
 
@@ -196,6 +205,7 @@ export default {
       left: calc(100% - 0.5px);
     }
   }
+
   &.position-right {
 
     margin-left: 10px;
@@ -207,7 +217,7 @@ export default {
       width: 0;
       height: 0;
       position: absolute;
-      top:50%;
+      top: 50%;
       transform: translateY(-50%);
     }
 
