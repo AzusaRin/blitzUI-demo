@@ -30,13 +30,32 @@
 
 </head>
 <body>
-<div id="app" style="padding:100px">
-  <bl-popover>
+<div id="app" style="padding:300px">
+    <bl-popover position="left">
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <bl-button>啊哈哈哈哈</bl-button>
+    </bl-popover>
+  <bl-popover position="bottom">
       <template slot="content">
           <div>popover内容</div>
       </template>
-          <button>点我</button>
+          <bl-button>啊哈哈哈哈</bl-button>
   </bl-popover>
+    <bl-popover position="top">
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <bl-button>啊哈哈哈哈</bl-button>
+    </bl-popover>
+
+    <bl-popover position="right">
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <bl-button>啊哈哈哈哈</bl-button>
+    </bl-popover>
 </div>
 <script src="./src/app.js"></script>
 </body>
