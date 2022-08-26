@@ -1,9 +1,9 @@
 <template>
   <div class="collapse-item">
-    <div class="title" @click="open=!open">
+    <div class="title" @click="toggleCollapse">
       {{ title }}
     </div>
-    <div class="content"  v-if="open">
+    <div class="content" v-if="openStatus===true">
       <slot></slot>
     </div>
   </div>
@@ -16,12 +16,42 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    name:{
+      type: String,
+      required: true
     }
   },
-  data(){
-    return{
-      open:false
+  data() {
+    return {
+      openStatus: false
     }
+  },
+  inject: ['eventHub'],
+  methods: {
+    toggleCollapse() {
+      if (this.openStatus === true) {
+        this.openStatus = false
+      } else {
+
+      this.eventHub &&  this.eventHub.$emit('update:selected', this.name)
+      }
+    },
+    close() {
+      this.openStatus = false
+    },
+    open(){
+      this.openStatus= true
+    }
+  },
+  mounted() {
+    this.eventHub &&  this.eventHub.$on('update:selected', (name) => {
+      if (name !== this.name) {
+        this.close()
+      }else {
+        this.open()
+      }
+    })
   }
 }
 </script>
@@ -37,7 +67,7 @@ export default {
     flex-direction: column;
     font-size: 13px;
     cursor: pointer;
-    padding: 24px ;
+    padding: 24px;
     outline: none;
     font-weight: 500;
 
@@ -53,7 +83,7 @@ export default {
 
   }
 
-  .content{
+  .content {
 
     font-size: 13px;
     color: #303133;
