@@ -30,6 +30,12 @@ export default {
   },
   mounted() {
     this.eventHub.$emit('update:selected',this.selected)
+    this.eventHub.$on('update:selected',()=>{
+      this.$emit('update:selected',name)
+    })
+    this.$children.forEach(vm=>{
+      vm.single = this.single
+    })
   }
 }
 </script>

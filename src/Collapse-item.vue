@@ -24,7 +24,8 @@ export default {
   },
   data() {
     return {
-      openStatus: false
+      openStatus: false,
+      single:false
     }
   },
   inject: ['eventHub'],
@@ -47,7 +48,9 @@ export default {
   mounted() {
     this.eventHub &&  this.eventHub.$on('update:selected', (name) => {
       if (name !== this.name) {
-        this.close()
+        if(this.single){
+          this.close()
+        }
       }else {
         this.open()
       }
