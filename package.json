@@ -41,7 +41,8 @@
     "parcel": "^1.9.2",
     "sinon": "^14.0.0",
     "sinon-chai": "^3.7.0",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "vuepress": "^1.9.7"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"

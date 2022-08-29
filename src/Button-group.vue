@@ -5,10 +5,10 @@
 </template>
 <script>
 export default {
-  name:'BlitzButtonGroup',
+  name: 'BlitzButtonGroup',
   mounted() {
-    for (let node of this.$el.children){
-      if(node.nodeName.toLowerCase()!=='button'){
+    for (let node of this.$el.children) {
+      if (node.nodeName.toLowerCase() !== 'button') {
         console.warn(`请注意bl-button-group 的子元素只能是bl-button，否则可能会发生样式错误。现在子元素是${node.nodeName.toLowerCase()}`)
       }
     }
@@ -22,9 +22,11 @@ export default {
 
   > .bl-button {
     border-radius: 0;
-    &:not(:first-child){
+
+    &:not(:first-child) {
       margin-left: -1px;
     }
+
     &:first-child {
       border-top-left-radius: var(--button-border-radius);
       border-bottom-left-radius: var(--button-border-radius);
@@ -34,6 +36,7 @@ export default {
       border-top-right-radius: var(--button-border-radius);
       border-bottom-right-radius: var(--button-border-radius);
     }
+
   }
 }
 </style>
