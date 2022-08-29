@@ -17,7 +17,7 @@ export default {
       type: String,
       required: true
     },
-    name:{
+    name: {
       type: String,
       required: true
     }
@@ -25,35 +25,24 @@ export default {
   data() {
     return {
       openStatus: false,
-      single:false
+      single: false
     }
   },
   inject: ['eventHub'],
   methods: {
     toggleCollapse() {
       if (this.openStatus === true) {
-        this.openStatus = false
+        this.eventHub && this.eventHub.$emit('update:removeSelected', this.name)
       } else {
 
-      this.eventHub &&  this.eventHub.$emit('update:selected', this.name)
+        this.eventHub && this.eventHub.$emit('update:addSelected', this.name)
       }
     },
-    close() {
-      this.openStatus = false
-    },
-    open(){
-      this.openStatus= true
-    }
+
   },
   mounted() {
-    this.eventHub &&  this.eventHub.$on('update:selected', (name) => {
-      if (name !== this.name) {
-        if(this.single){
-          this.close()
-        }
-      }else {
-        this.open()
-      }
+    this.eventHub && this.eventHub.$on('update:selected', (names) => {
+      this.openStatus = !!names.includes(this.name);
     })
   }
 }

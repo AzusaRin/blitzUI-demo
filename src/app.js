@@ -49,7 +49,7 @@ new Vue({
     el: '#app',
 
     data: {
-        selected: '2'
+        selected: ['2','1']
     },
     methods: {}
 
