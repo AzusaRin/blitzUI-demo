@@ -3,11 +3,12 @@
   "version": "0.0.3",
   "description": "这是一个Vue的UI框架",
   "main": "dist/index.js",
-  "type": "module",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "built": "parcel build test/*  --no-cache --no-minify  ",
-    "test": "karma start --single-run"
+    "test": "karma start --single-run",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -44,7 +45,8 @@
     "sinon": "^14.0.0",
     "sinon-chai": "^3.7.0",
     "vue-template-compiler": "^2.5.16",
-    "vuepress": "^1.9.7"
+    "vuepress": "^1.9.7",
+    "webpack": "^4.46.0"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
