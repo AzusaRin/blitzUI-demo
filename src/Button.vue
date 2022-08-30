@@ -18,7 +18,7 @@ export default {
     iconName: {
       type: String,
       validator(value) {
-        return ['info', 'setting',  'loading', 'download','success', 'warning', 'error', 'left', 'right'].includes(value)
+        return ['info', 'setting', 'download','success', 'warning', 'error', 'left', 'right'].includes(value)
       }
     },
     iconPosition: {
@@ -32,14 +32,16 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+
+
 .bl-button {
-  color: var(--button-color);
-  font-size: var(--font-size);
-  line-height: var(--button-line-height);
-  background-color: var(--button-bg);
-  padding: var(--button-padding);
-  border: 1px solid var(--button-border-color);
-  border-radius: var(--button-border-radius);
+  color: #606266;
+  font-size: 14px;
+  line-height: 1;
+  background-color:  #fff;
+  padding: 12px 1em;
+  border: 1px solid #dcdfe6;
+  border-radius:4px;
   text-align: center;
   cursor: pointer;
   transition: .1s;
@@ -141,43 +143,33 @@ export default {
     }
   }
 
-  .loading {
-    animation: spin 1s infinite linear;
-    margin-right: 0.3em;
-  }
-
-
   &:hover {
-    color: var(--button-color-hover);
-    border-color: var(--button-border-color-hover);
-    background-color: var(--button-bg-hover);
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
     z-index: 100;
 
-
-    > .loading {
-      fill: var(--button-color-hover);
-    }
     > .setting {
-      fill: var(--button-color-hover);
+      fill: #409eff;
       animation: spin .5s;
     }
     > .download {
-      fill: var(--button-color-hover);
+      fill: #409eff;
       animation: jump .5s;
     }
     > .left {
-      fill: var(--button-color-hover);
+      fill: #409eff;
       animation: jump-left .5s;
     }
     > .right {
-      fill: var(--button-color-hover);
+      fill: #409eff;
       animation: jump-right .5s;
     }
   }
 
   &:active {
-    color: var(--button-color-border-active);
-    border-color: var(--button-color-border-active);
+    color: rgb(88, 159, 234);
+    border-color: rgb(88, 159, 234);
     z-index: 100;
   }
   > .icon {
