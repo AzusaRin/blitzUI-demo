@@ -1,6 +1,7 @@
 <template>
-  <button class="bl-button" :class="{[`icon-${iconPosition}`]:true,[`icon-${iconName}`]:true}" @click="$emit('click')">
-    <bl-icon v-if="iconName" class="icon" :class="iconName" :name="iconName"></bl-icon>
+  <button class="bl-button" :class="{[`position-${iconPosition}`]:true,[`icon-${iconName}`]:true}" @click="$emit('click')">
+    <bl-icon v-if="iconName && !loading" class="icon" :class="iconName" :name="iconName"></bl-icon>
+    <bl-icon v-if="iconName && loading"  class="icon" :class="{iconName:true,loading:true}" name="loading"></bl-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -20,6 +21,10 @@ export default {
       validator(value) {
         return ['info', 'setting', 'download','success', 'warning', 'error', 'left', 'right'].includes(value)
       }
+    },
+    loading:{
+      type:Boolean,
+      default: false
     },
     iconPosition: {
       type: String,
@@ -165,6 +170,9 @@ export default {
       fill: #409eff;
       animation: jump-right .5s;
     }
+    > .loading{
+      fill: #409eff;
+    }
   }
 
   &:active {
@@ -179,7 +187,7 @@ export default {
     order: 2;
   }
 
-  &.icon-right {
+  &.position-right {
 
     > .icon {
       order: 2;
@@ -192,6 +200,9 @@ export default {
     }
   }
 
+  .loading{
+    animation: spin linear infinite 1s;
+  }
 
   @keyframes spin {
     0% {

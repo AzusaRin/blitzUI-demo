@@ -21,6 +21,20 @@ describe('Button', () => {
         expect(useElements[0].getAttribute('xlink:href')).to.equal('#icon-success')
         vm.$destroy()
     })
+
+    it('可以设置loading.', () => {
+        const Constructor = Vue.extend(Button)
+        const vm = new Constructor({
+            propsData: {
+                iconName:'success',
+                loading:true
+            }
+        }).$mount()
+        const useElements = vm.$el.querySelectorAll('use')
+        expect(useElements.length).to.equal(1)
+        expect(useElements[0].getAttribute('xlink:href')).to.equal('#icon-loading')
+        vm.$destroy()
+    })
     it('icon 默认的 order 是 1', () => {
         const div = document.createElement('div')
         document.body.appendChild(div)
