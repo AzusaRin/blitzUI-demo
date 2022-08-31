@@ -6,31 +6,28 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BlitzUI</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-    </style>
+<style>
+    *{box-sizing: border-box}
+</style>
 
 </head>
 <body>
-<div id="app" style="padding:300px">
-<bl-button icon-name="success">111</bl-button>
-    <bl-button icon-name="setting">111</bl-button>
-    <bl-button icon-name="info">111</bl-button>
-    <bl-button icon-name="warning">111</bl-button>
-    <bl-button icon-name="error">111</bl-button>
-    <bl-button icon-name="left" icon-position="right">111</bl-button>
-    <bl-button icon-name="download">111</bl-button>
-    <bl-button-group>
-        <bl-button icon-name="left"></bl-button>
-        <bl-button>信息</bl-button>
-        <bl-button icon-name="right"></bl-button>
-    </bl-button-group>
+<div id="app" style="padding: 300px">
+    <bl-tabs selected="tab1">
+        <bl-tabs-head>
+            <bl-tabs-item name='tab1'>Tab1</bl-tabs-item>
+            <bl-tabs-item name='tab2'>比较长名字的Tab2</bl-tabs-item>
+            <bl-tabs-item name='tab3'>更将长的名字长度的Tab3</bl-tabs-item>
+            <bl-tabs-item name='tab4'>被禁用的Tab4</bl-tabs-item>
+        </bl-tabs-head>
+        <bl-tabs-body>
+            <bl-tabs-panel name='tab1'>内容1</bl-tabs-panel>
+            <bl-tabs-panel name='tab2'>内容2</bl-tabs-panel>
+            <bl-tabs-panel name='tab3'>内容3</bl-tabs-panel>
+            <bl-tabs-panel name='tab4'>内容4</bl-tabs-panel>
+        </bl-tabs-body>
+    </bl-tabs>
 </div>
-<script type="module"    src="./src/app.js"></script>
+<script   src="./src/app.js"></script>
 </body>
 </html>

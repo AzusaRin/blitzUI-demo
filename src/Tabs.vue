@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs" :class="classes">
+  <div class="tabs" >
     <slot></slot>
   </div>
 </template>
@@ -48,7 +48,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tabs {
 
-}
 </style>

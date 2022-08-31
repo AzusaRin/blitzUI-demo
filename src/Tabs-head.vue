@@ -13,9 +13,9 @@ export default {
   name: 'BlitzTabsHead',
   inject: ['eventHub'],
   mounted() {
-    this.eventHub.$on('update:selected', (item, child) => {
+    this.eventHub && this.eventHub.$on('update:selected', (item, child) => {
       let {width,left} = child.$el.getBoundingClientRect()
-        this.$refs.line.style.left=`${left}px`
+      this.$refs.line.style.left= `${left}px`
         this.$refs.line.style.width = `${width}px`
     })
   },

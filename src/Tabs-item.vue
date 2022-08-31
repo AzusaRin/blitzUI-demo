@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-item" @click="onCilck" :class="classes" :data-name="name">
+  <div class="tabs-item" @click="onClick" :class="classes" :data-name="name">
     <slot></slot>
   </div>
 </template>
@@ -32,8 +32,8 @@ export default {
     }
   },
   methods: {
-    onCilck() {
-      if (this.disabled === true) {
+    onClick() {
+      if (this.disabled) {
         return
       }
      this.eventHub && this.eventHub.$emit('update:selected', this.name, this)
@@ -46,18 +46,13 @@ export default {
         this.active = name === this.name;
       })
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .tabs-item {
-  margin: 0 14px;
-
-&:first-child{
-  margin-left: 0;
-}
-
+  padding: 0 1em;
   flex-shrink: 0;
   cursor: pointer;
   height: 100%;
@@ -66,6 +61,7 @@ export default {
 
   &.active {
     color: #409eff;
+
   }
 
   &.disabled {

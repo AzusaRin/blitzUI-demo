@@ -88,13 +88,13 @@ export default {
   $class: col-;
   @for $n from 1 through 24 {
     &.#{$class}#{$n} {
-      width: ($n/24)*100%;
+      width: calc($n/24)*100%;
     }
   }
   $class: offset-;
   @for $n from 1 through 24 {
     &.#{$class}#{$n} {
-      margin-left: ($n/24)*100%;
+      margin-left: calc($n/24)*100%;
     }
   }
 
@@ -102,13 +102,13 @@ export default {
     $class: col-pad-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
-        width: ($n/24)*100%;
+        width: calc($n/24)*100%;
       }
     }
     $class: offset-pad-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
-        margin-left: ($n/24)*100%;
+        margin-left: calc($n/24)*100%;
       }
     }
   }
@@ -116,13 +116,13 @@ export default {
     $class: col-small-device-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
-        width: ($n/24)*100%;
+        width: calc($n/24)*100%;
       }
     }
     $class: offset-small-device-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
-        margin-left: ($n/24)*100%;
+        margin-left: calc($n/24)*100%;
       }
     }
   }
@@ -130,13 +130,13 @@ export default {
     $class: col-middle-device-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
-        width: ($n/24)*100%;
+        width:calc($n/24)*100%;
       }
     }
     $class: offset-middle-device-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
-        margin-left: ($n/24)*100%;
+        margin-left: calc($n/24)*100%;
       }
     }
   }
@@ -144,13 +144,13 @@ export default {
     $class: col-big-middle-device-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
-        width: ($n/24)*100%;
+        width: calc($n/24)*100%;
       }
     }
     $class: offset-big-device-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {
-        margin-left: ($n/24)*100%;
+        margin-left: calc($n/24)*100%;
       }
     }
   }
