@@ -10,7 +10,9 @@
       </div>
     </div>
     <div class="code">
-      <pre><code>{{ code }}</code></pre>
+      <vue-code-highlight>
+        <pre><code>{{ code }}</code></pre>
+      </vue-code-highlight>
     </div>
   </div>
 
@@ -18,11 +20,13 @@
 
 <script>
 import Button from '../../../src/Button'
-
+import {component as VueCodeHighlight} from 'vue-code-highlight';
+import "vue-code-highlight/themes/prism-okaidia.css";
 
 export default {
   components: {
-    'bl-button': Button
+    'bl-button': Button,
+    VueCodeHighlight,
   },
   data() {
     return {

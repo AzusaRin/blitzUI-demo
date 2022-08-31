@@ -1,5 +1,5 @@
 ---
-title: Input 输入框
+title: Input-输入框
 ---
 
 # 输入框
@@ -52,9 +52,9 @@ title: Input 输入框
 
 ## Input Events
 
-| 事件名称   | 说明                  |             回调参数              | 
-|--------|---------------------|:-----------------------------:|
-| change | 仅在输入框失去焦点或用户按下回车时触发 | (value: string &#124; number) |
-| input  | 在 Input 值改变时触发      | (value: string &#124; number) | 
-| focus  | 在 Input 获得焦点时触发     |        (event: Event)         |
-| blur   | 在 Input 失去焦点时触发     |        (event: Event)         |
+| 事件名称   | 说明              |             回调参数              | 
+|--------|-----------------|:-----------------------------:|
+| change | 仅在输入框失去焦点时触发    | (value: string &#124; number) |
+| input  | 在 Input 值改变时触发  | (value: string &#124; number) | 
+| focus  | 在 Input 获得焦点时触发 | (value: string &#124; number) |
+| blur   | 在 Input 失去焦点时触发 | (value: string &#124; number) |

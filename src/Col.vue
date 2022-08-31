@@ -1,6 +1,6 @@
 <template>
-  <div class="col" :class="colClass"
-       :style="colStyle">
+  <div :class="colClass" :style="colStyle"
+       class="col">
     <slot></slot>
   </div>
 </template>
@@ -50,8 +50,10 @@ export default {
     colClass() {
       let {span, offset} = this
       let {pad, smallDevice, middleDevice, bigDevice} = this
-    const createClasses = (obj, str = '') => {
-        if(!obj){return []}
+      const createClasses = (obj, str = '') => {
+        if (!obj) {
+          return []
+        }
         let array = []
         if (obj.span) {
           array.push(`col-${str}${obj.span}`)
@@ -62,11 +64,11 @@ export default {
         return array
       }
       return [
-          ...createClasses({span,offset}),
-          ...createClasses(pad,'pad-'),
-          ...createClasses(smallDevice,'small-device-'),
-          ...createClasses(middleDevice,'middle-device-'),
-          ...createClasses(bigDevice,'big-device-')
+        ...createClasses({span, offset}),
+        ...createClasses(pad, 'pad-'),
+        ...createClasses(smallDevice, 'small-device-'),
+        ...createClasses(middleDevice, 'middle-device-'),
+        ...createClasses(bigDevice, 'big-device-')
 
       ]
     },

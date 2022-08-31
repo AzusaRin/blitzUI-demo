@@ -3,8 +3,8 @@
     <input :value="value" :placeholder="placeholder" :disabled="disabled" :readonly="readonly" type="text"
            @change="$emit('change',$event.target.value)"
            @input="$emit('input',$event.target.value)"
-           @focus="$emit('focus',$event)"
-           @blur="$emit('blur',$event)">
+           @focus="$emit('focus',$event.target.value)"
+           @blur="$emit('blur',$event.target.value)">
     <template v-if="error">
       <bl-icon name="error" class="errorIcon"></bl-icon>
       <span class="errorText">{{ error }}</span>

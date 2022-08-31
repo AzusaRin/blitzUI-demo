@@ -9,19 +9,24 @@
       </div>
     </div>
     <div class="code">
-      <pre><code>{{ code }}</code></pre>
+      <vue-code-highlight>
+        <pre><code>{{ code }}</code></pre>
+      </vue-code-highlight>
     </div>
   </div>
 
 </template>
 
 <script>
-import Input from '../../../src/Input'
+import Input from '../../../src/Input';
+import {component as VueCodeHighlight} from 'vue-code-highlight';
+import "vue-code-highlight/themes/prism-okaidia.css";
 
 
 export default {
   components: {
-    'bl-input': Input
+    'bl-input': Input,
+    VueCodeHighlight,
   },
   data(){
     return{
