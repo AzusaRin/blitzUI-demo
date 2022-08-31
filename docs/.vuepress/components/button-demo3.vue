@@ -39,7 +39,9 @@ export default {
       loading1: true
     }
   }
-}`}
+}`,
+    loading1:true
+    }
   },
 
 }
