@@ -2,11 +2,10 @@
   <div class="wrapper">
     <div class="button-wrapper">
       <div class="button">
-        <bl-button :loading="true">加载中</bl-button>
-        <bl-button @click="loading1=!loading1" :loading="loading1" icon-name="download">点击切换</bl-button>
+        <bl-button :disabled="true">已禁用</bl-button>
       </div>
       <div class="info">
-        <span>使用 <code>:loading="true"</code>、<code>:loading="false"</code>来定义是否为加载中，可绑定鼠标事件切换。</span>
+        <span>使用 <code>:disabled="true"</code>、<code>:disabled="false"</code>来定义是否为禁用状态。</span>
       </div>
     </div>
     <div class="code">
@@ -26,20 +25,8 @@ export default {
   },
   data() {
     return {
-      code: `  <div>
-    <bl-button :loading="true">加载中</bl-button>
-    <bl-button @click="loading1=!loading1" :loading="loading1" icon-name="download">
-    默认按钮
-    </bl-button>
-  </div>
-
-export default {
-  data() {
-    return {
-      loading1: true
+      code: `<bl-button :disabled="true">已禁用</bl-button>`
     }
-  }
-}`}
   },
 
 }

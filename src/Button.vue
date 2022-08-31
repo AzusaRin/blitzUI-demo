@@ -1,7 +1,8 @@
 <template>
-  <button class="bl-button" :class="{[`position-${iconPosition}`]:true,[`icon-${iconName}`]:true}" @click="$emit('click')">
-    <bl-icon v-if="iconName && !loading" class="icon" :class="iconName" :name="iconName"></bl-icon>
-    <bl-icon v-if="loading"  class="icon" :class="{iconName:true,loading:true}" name="loading"></bl-icon>
+  <button class="bl-button" :class="{[`position-${iconPosition}`]:true,[`icon-${iconName}`]:true}"
+          @click="$emit('click')" :disabled="disabled">
+    <bl-icon v-if="iconName && !loading" class="icon" :class="iconName"  :name="iconName"></bl-icon>
+    <bl-icon v-if="loading" class="icon" :class="{iconName:true,loading:true}"  name="loading"></bl-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -19,11 +20,11 @@ export default {
     iconName: {
       type: String,
       validator(value) {
-        return ['info', 'setting', 'download','success', 'warning', 'error', 'left', 'right'].includes(value)
+        return ['info', 'setting', 'download', 'success', 'warning', 'error', 'left', 'right'].includes(value)
       }
     },
-    loading:{
-      type:Boolean,
+    loading: {
+      type: Boolean,
       default: false
     },
     iconPosition: {
@@ -32,6 +33,10 @@ export default {
       validator(value) {
         return !(value !== 'left' && value !== 'right');
       }
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -43,10 +48,10 @@ export default {
   color: #606266;
   font-size: 14px;
   line-height: 1;
-  background-color:  #fff;
+  background-color: #fff;
   padding: 12px 1em;
   border: 1px solid #dcdfe6;
-  border-radius:4px;
+  border-radius: 4px;
   text-align: center;
   cursor: pointer;
   transition: .1s;
@@ -55,95 +60,106 @@ export default {
   align-items: center;
   vertical-align: middle;
 
+
   &.icon-info {
     background-color: rgb(144, 147, 153);
     color: white;
     border-color: rgb(144, 147, 153);
-    > .info{
-      fill:white;
+
+    > .info {
+      fill: white;
     }
 
-    &:hover{
-      background-color: rgb(166,169,173);
-      border-color: rgb(166,169,173);
+    &:hover {
+      background-color: rgb(166, 169, 173);
+      border-color: rgb(166, 169, 173);
       color: white;
     }
 
 
-    &:active{
+    &:active {
       background-color: white;
       border-color: rgb(144, 147, 153);
       color: rgb(144, 147, 153);
-      > .info{
-        fill:rgb(144, 147, 153);
+
+      > .info {
+        fill: rgb(144, 147, 153);
       }
     }
   }
 
-
-&.icon-success{
-  background-color: rgb(103,194,58);
-  border-color: rgb(103,194,58);
-  color: white;
-
-  > .success{
-    fill:white;
-  }
-  &:hover{
-    background-color: rgb(133,206,97);
-    border-color: rgb(133,206,97);
+  &.icon-success {
+    background-color: rgb(103, 194, 58);
+    border-color: rgb(103, 194, 58);
     color: white;
-  }
 
-  &:active{
-    background-color: white;
-    border-color: rgb(103,194,58);
-    color: rgb(103,194,58);
-    > .success{
-      fill:rgb(103,194,58);
+    > .success {
+      fill: white;
     }
-  }
-}
-  &.icon-warning{
-    background-color: rgb(245,108,108);
-    color: white;
-    > .warning{
-      fill:white;
-    }
-    &:hover{
-      background-color: rgb(247,137,137);
-      border-color: rgb(247,137,137);
+
+    &:hover {
+      background-color: rgb(133, 206, 97);
+      border-color: rgb(133, 206, 97);
       color: white;
     }
 
-    &:active{
-      background-color:white;
-      border-color: rgb(245,108,108);
-      color:rgb(245,108,108);
-      > .warning{
-        fill:rgb(245,108,108);
-      }
-    }
-  }
-
-  &.icon-error{
-    background-color: rgb(230,162,60);
-    color: white;
-    > .error{
-      fill:white;
-    }
-    &:hover{
-      background-color: rgb(235,181,99);
-      border-color: rgb(235,181,99);
-      color: white;
-    }
-
-    &:active{
+    &:active {
       background-color: white;
-      border-color: rgb(230,162,60);
-      color:  rgb(230,162,60);
-      > .error{
-        fill:rgb(230,162,60);
+      border-color: rgb(103, 194, 58);
+      color: rgb(103, 194, 58);
+
+      > .success {
+        fill: rgb(103, 194, 58);
+      }
+    }
+  }
+
+  &.icon-warning {
+    background-color: rgb(245, 108, 108);
+    color: white;
+
+    > .warning {
+      fill: white;
+    }
+
+    &:hover {
+      background-color: rgb(247, 137, 137);
+      border-color: rgb(247, 137, 137);
+      color: white;
+    }
+
+    &:active {
+      background-color: white;
+      border-color: rgb(245, 108, 108);
+      color: rgb(245, 108, 108);
+
+      > .warning {
+        fill: rgb(245, 108, 108);
+      }
+    }
+  }
+
+  &.icon-error {
+    background-color: rgb(230, 162, 60);
+    color: white;
+
+    > .error {
+      fill: white;
+    }
+
+    &:hover {
+      background-color: rgb(235, 181, 99);
+      border-color: rgb(235, 181, 99);
+      color: white;
+    }
+
+    &:active {
+      background-color: white;
+      border-color: rgb(230, 162, 60);
+      color: rgb(230, 162, 60);
+
+      > .error {
+        fill: rgb(230, 162, 60);
       }
     }
   }
@@ -158,19 +174,23 @@ export default {
       fill: #409eff;
       animation: spin .5s;
     }
+
     > .download {
       fill: #409eff;
       animation: jump .5s;
     }
+
     > .left {
       fill: #409eff;
       animation: jump-left .5s;
     }
+
     > .right {
       fill: #409eff;
       animation: jump-right .5s;
     }
-    > .loading{
+
+    > .loading {
       fill: #409eff;
     }
   }
@@ -180,9 +200,12 @@ export default {
     border-color: rgb(88, 159, 234);
     z-index: 100;
   }
+
   > .icon {
-    order: 1;margin-right: 0.3em;
+    order: 1;
+    margin-right: 0.3em;
   }
+
   > .content {
     order: 2;
   }
@@ -200,8 +223,15 @@ export default {
     }
   }
 
-  .loading{
+  .loading {
     animation: spin linear infinite 1s;
+  }
+
+  &[disabled] {
+    background-color: #f5f7fa;
+    border-color: #e4e7ed;
+    color: #c0c4cc;
+    cursor: not-allowed;
   }
 
   @keyframes spin {

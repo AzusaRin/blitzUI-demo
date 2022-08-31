@@ -64,6 +64,20 @@ describe('Button', () => {
         vm.$el.remove()
         vm.$destroy()
     })
+    it('接受disabled', () => {
+        const div = document.createElement('div')
+        document.body.appendChild(div)
+        const Constructor = Vue.extend(Button)
+        const vm = new Constructor({
+            propsData: {
+                disabled: true
+            }
+        }).$mount(div)
+        const buttonElement = vm.$el.querySelector('button')
+        expect(buttonElement.disabled).to.eq(true)
+        vm.$el.remove()
+        vm.$destroy()
+    })
     it('点击 button 触发 click 事件', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({

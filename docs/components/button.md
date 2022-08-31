@@ -29,6 +29,12 @@ title: Button 按钮
 
 ---
 
+## 禁用状态
+
+<button-demo4></button-demo4>
+
+---
+
 ## Attributes
 
 | 参数            | 说明        | 类型      | 可选值                                                                          |   默认值    |
@@ -36,3 +42,4 @@ title: Button 按钮
 | icon-name     | 按钮种类      | String  | 'info', 'setting', 'download','success', 'warning', 'error', 'left', 'right' |    —     |
 | icon-position | 按钮图标的左右位置 | String  | 'left','right'                                                               |  'left'  |
 | loading       | 加载中       | Boolean |                         —                                     |  false   |
+| disabled      | 是否禁用      | Boolean |                         —                                     |  false   |
