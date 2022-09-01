@@ -11,10 +11,10 @@ title: Toast-轻提示
 
 ::: tip 引入
 本组件引入和其他组件稍有不同，请参考以下代码。
-```
+```js
 import Vue from "vue";
-import { toastPlugin } from "blitz-ui";
-import { Toast } from "blitz-ui";
+import { toastPlugin } from "blitz-ui-demo";
+import { Toast } from "blitz-ui-demo";
 
 Vue.use(toastPlugin);
 ```

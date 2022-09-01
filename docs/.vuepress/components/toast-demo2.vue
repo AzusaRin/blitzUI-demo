@@ -45,9 +45,9 @@ export default {
 
 
 import Vue from "vue";
-import {  toastPlugin  } from "blitz-ui";
-import {  Toast  } from "blitz-ui";
-import {  Button  } from "blitz-ui";
+import {  toastPlugin  } from "blitz-ui-demo";
+import {  Toast  } from "blitz-ui-demo";
+import {  Button  } from "blitz-ui-demo";
 
 
 

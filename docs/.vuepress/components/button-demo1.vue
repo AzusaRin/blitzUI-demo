@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="button-wrapper">
     <div class="button">
-      <bl-button>默认按钮</bl-button>
+      <bl-button>常规按钮</bl-button>
       <bl-button icon-name="setting">设置按钮</bl-button>
       <bl-button icon-name="download" icon-position="right">下载按钮</bl-button>
     </div>

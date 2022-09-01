@@ -3,10 +3,14 @@
     <div class="input-wrapper">
       <div class="input">
         <div class="wrapper">
-          <bl-button @click="showToast">可修改自动关闭时间的Toast</bl-button>
+          <bl-collapse :selected.sync="selected" :single="true">
+            <bl-collapse-item title="标题1" name="1">谢谢您使用BlitzUI</bl-collapse-item>
+            <bl-collapse-item title="标题2" name="2">谢谢您使用BlitzUI</bl-collapse-item>
+            <bl-collapse-item title="标题3" name="3">谢谢您使用BlitzUI</bl-collapse-item>
+          </bl-collapse>
         </div>
         <div class="info">
-          <span>可修改Toast的自动关闭时间,可在方法里传入<code>autoClose</code>属性来调用。可设置为false，取消自动关闭。默认五秒之后自动关闭。</span>
+          <span>通过 <code>:single="true"</code> 来控制展开的面板列表只能为一页，选择某页将会关闭其他页。</span>
         </div>
       </div>
       <div class="code">
@@ -21,52 +25,42 @@
 <script>
 import {component as VueCodeHighlight} from 'vue-code-highlight';
 import "vue-code-highlight/themes/prism-okaidia.css";
-import Vue from "vue";
-import toastPlugin from "../../../src/toastPlugin";
-import Toast from "../../../src/Toast";
-import Button from "../../../src/Button";
+import Collapse from "../../../src/Collapse";
+import CollapseItem from "../../../src/Collapse-item";
 
-
-Vue.use(toastPlugin)
 
 export default {
   components: {
     VueCodeHighlight,
-    'bl-toast': Toast,
-    'bl-button': Button,
+    'bl-collapse': Collapse,
+    'bl-collapse-item': CollapseItem
 
   },
   data() {
     return {
       code: `
 <div class="wrapper">
-  <bl-button @click="showToast">可修改自动关闭时间的Toast</bl-button>
+  <bl-collapse :selected.sync="selected" :single="true">
+    <bl-collapse-item title="标题1" name="1">谢谢您使用BlitzUI</bl-collapse-item>
+    <bl-collapse-item title="标题2" name="2">谢谢您使用BlitzUI</bl-collapse-item>
+    <bl-collapse-item title="标题3" name="3">谢谢您使用BlitzUI</bl-collapse-item>
+  </bl-collapse>
 </div>
 
 
-import Vue from "vue";
-import {  toastPlugin  } from "blitz-ui-demo";
-import {  Toast  } from "blitz-ui-demo";
-import {  Button  } from "blitz-ui-demo";
-
-
-
 export default {
-  methods: {
-    showToast() {
-      this.$toast('本提示将会在两秒后关闭', {autoClose:2})
+  data(){
+  return{
+    selected:['1']
     }
   }
 }
 
-`
+`,
+      selected:['1']
     }
   },
-  methods: {
-    showToast() {
-      this.$toast('本提示将会在两秒后关闭', {autoClose:2})
-    }
-  }
+
 
 }
 </script>

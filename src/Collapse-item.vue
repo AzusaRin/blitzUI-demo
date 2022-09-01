@@ -1,9 +1,9 @@
 <template>
   <div class="collapse-item">
-    <div class="title" @click="toggleCollapse" :data-name="name">
+    <div :data-name="name" class="title" @click="toggleCollapse">
       {{ title }}
     </div>
-    <div class="content" v-if="openStatus===true">
+    <div v-if="openStatus===true" class="content">
       <slot></slot>
     </div>
   </div>
@@ -49,10 +49,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-35%)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
 .collapse-item {
 
   .title {
-    height: 48px;
+    height: 24px;
     line-height: 48px;
     display: flex;
     justify-content: center;
@@ -76,7 +87,7 @@ export default {
   }
 
   .content {
-
+    animation: slideTop .5s;
     font-size: 13px;
     color: #303133;
     line-height: 1.7692307692;
