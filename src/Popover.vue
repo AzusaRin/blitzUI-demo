@@ -1,8 +1,8 @@
 <template>
-  <div class="popover" ref="popover" >
+  <div ref="popover" class="popover">
     <transition name='fade'>
-      <div class="content-wrapper" ref="contentWrapper" v-if="visible" :class="{[`position-${position}`]:true}">
-        <slot name="content" :close="close"></slot>
+      <div v-if="visible" ref="contentWrapper" :class="{[`position-${position}`]:true}" class="content-wrapper">
+        <slot :close="close" name="content"></slot>
       </div>
     </transition>
     <span ref="switchWrapper" class="switchWrapper">
@@ -19,14 +19,14 @@ export default {
       type: String,
       default: 'top',
       validator(value) {
-      return  ['top', 'left', 'right', 'bottom'].includes(value)
+        return ['top', 'left', 'right', 'bottom'].includes(value)
       }
     },
-    trigger:{
+    trigger: {
       type: String,
       default: 'click',
       validator(value) {
-     return   ['click','hover'].includes(value)
+        return ['click', 'hover'].includes(value)
       }
     },
   },
@@ -36,20 +36,20 @@ export default {
     }
   },
 
-mounted(){
-    if(this.trigger === 'click'){
-      this.$refs.popover.addEventListener('click',this.onClick)
-    }else{
-      this.$refs.popover.addEventListener('mouseenter',this.open)
-      this.$refs.popover.addEventListener('mouseleave',this.close)
+  mounted() {
+    if (this.trigger === 'click') {
+      this.$refs.popover.addEventListener('click', this.onClick)
+    } else {
+      this.$refs.popover.addEventListener('mouseenter', this.open)
+      this.$refs.popover.addEventListener('mouseleave', this.close)
     }
-},
+  },
   destroyed() {
-    if(this.trigger === 'click'){
-      this.$refs.popover.removeEventListener('click',this.onClick)
-    }else{
-      this.$refs.popover.removeEventListener('mouseenter',this.open)
-      this.$refs.popover.removeEventListener('mouseleave',this.close)
+    if (this.trigger === 'click') {
+      this.$refs.popover.removeEventListener('click', this.onClick)
+    } else {
+      this.$refs.popover.removeEventListener('mouseenter', this.open)
+      this.$refs.popover.removeEventListener('mouseleave', this.close)
     }
   },
   methods: {
@@ -134,6 +134,7 @@ mounted(){
 
   .switchWrapper {
     display: inline-block;
+    position: relative;
   }
 }
 
@@ -147,6 +148,7 @@ mounted(){
   max-width: 20em;
   border: 1px solid #ebeef5;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background: white;
 
   &.position-top {
     transform: translateY(-100%);
@@ -159,8 +161,8 @@ mounted(){
       width: 0;
       height: 0;
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 25%;
+      transform: translateX(-25%);
     }
 
     &::before {
@@ -184,8 +186,8 @@ mounted(){
       width: 0;
       height: 0;
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 25%;
+      transform: translateX(-25%);
     }
 
     &::before {
