@@ -14,8 +14,9 @@ export default {
   inject: ['eventHub'],
   mounted() {
     this.eventHub && this.eventHub.$on('update:selected', (item, child) => {
-      let {width,left} = child.$el.getBoundingClientRect()
-      this.$refs.line.style.left= `${left}px`
+      const {width,left} = child.$el.getBoundingClientRect()
+      const {left:headLeft} = this.$el.getBoundingClientRect()
+      this.$refs.line.style.left= `${left - headLeft}px`
         this.$refs.line.style.width = `${width}px`
     })
   },
@@ -27,8 +28,8 @@ export default {
   display: flex;
   height: 40px;
   justify-content: flex-start;
-  position: relative;
   border-bottom: 1px solid #ddd;
+  position: relative;
 
 
 
