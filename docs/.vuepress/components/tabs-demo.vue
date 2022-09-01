@@ -4,21 +4,21 @@
       <div class="tabs-wrapper">
 <bl-tabs :selected.sync="selected">
     <bl-tabs-head>
-      <bl-tabs-item name='tab1'>Tab1</bl-tabs-item>
-      <bl-tabs-item name='tab2'>比较长名字的Tab2</bl-tabs-item>
-      <bl-tabs-item name='tab3'>更将长的名字长度的Tab3</bl-tabs-item>
-      <bl-tabs-item name='tab4'>被禁用的Tab4</bl-tabs-item>
+      <bl-tabs-item name='tab1'>手机</bl-tabs-item>
+      <bl-tabs-item name='tab2'>数码</bl-tabs-item>
+      <bl-tabs-item name='tab3'>企业礼品</bl-tabs-item>
+      <bl-tabs-item name='tab4' :disabled="true">生鲜(被禁用)</bl-tabs-item>
     </bl-tabs-head>
     <bl-tabs-body>
-      <bl-tabs-panel name='tab1'>内容1</bl-tabs-panel>
-      <bl-tabs-panel name='tab2'>内容2</bl-tabs-panel>
-      <bl-tabs-panel name='tab3'>内容3</bl-tabs-panel>
-      <bl-tabs-panel name='tab4'>内容4</bl-tabs-panel>
+      <bl-tabs-panel name='tab1'>手机</bl-tabs-panel>
+      <bl-tabs-panel name='tab2'>数码</bl-tabs-panel>
+      <bl-tabs-panel name='tab3'>企业礼品</bl-tabs-panel>
+      <bl-tabs-panel name='tab4'>生鲜(被禁用)</bl-tabs-panel>
     </bl-tabs-body>
 </bl-tabs>
       </div>
       <div class="info">
-        <span>多个按钮组队出现，用于成组功能的按钮。</span>
+        <span>使用<code>name</code>进行内容与选项卡的绑定，使用<code>disabled</code>确认是否禁用,使用<code>selected</code>确定默认选项卡。</span>
       </div>
     </div>
     <div class="code">
@@ -53,11 +53,30 @@ export default {
   },
   data() {
     return {
-      code:`  <bl-button-group>
-    <bl-button icon-name="left">上一页</bl-button>
-    <bl-button>详情页</bl-button>
-    <bl-button icon-name="right" icon-position="right">下一页</bl-button>
-  </bl-button-group>`
+      code:`
+<div class="tabs-wrapper">
+  <bl-tabs :selected.sync="selected">
+    <bl-tabs-head>
+      <bl-tabs-item name='tab1'>手机</bl-tabs-item>
+      <bl-tabs-item name='tab2'>数码</bl-tabs-item>
+      <bl-tabs-item name='tab3'>企业礼品</bl-tabs-item>
+      <bl-tabs-item name='tab4' :disabled="true">生鲜(被禁用)</bl-tabs-item>
+  </bl-tabs-head>
+    <bl-tabs-body>
+      <bl-tabs-panel name='tab1'>手机</bl-tabs-panel>
+      <bl-tabs-panel name='tab2'>数码</bl-tabs-panel>
+      <bl-tabs-panel name='tab3'>企业礼品</bl-tabs-panel>
+      <bl-tabs-panel name='tab4'>生鲜(被禁用)</bl-tabs-panel>
+    </bl-tabs-body>
+</bl-tabs>
+      </div>
+
+
+  export default {
+    data() { return { selected: 'tab1' } }
+  }
+
+      `
       ,
       selected:'tab1'
     }
