@@ -13,7 +13,9 @@
 </template>
 
 <script>
+import Icon from "../src/Icon"
 export default {
+  components:{'bl-icon':Icon},
   name: 'BlitzToast',
   props: {
     autoClose: {
@@ -108,6 +110,7 @@ export default {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 200;
 
 
   &.position-top {
@@ -115,8 +118,7 @@ export default {
 
     .toast {
       animation: slideTop .3s;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+
     }
   }
 
@@ -134,8 +136,6 @@ export default {
 
     .toast {
       animation: slideBottom .3s;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
     }
 
 
