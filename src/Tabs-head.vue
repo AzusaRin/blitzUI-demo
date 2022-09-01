@@ -36,7 +36,7 @@ export default {
   > .line {
     position: absolute;
     bottom: 0;
-    border-bottom: 1.5px solid #409eff;
+    border-bottom: 2px solid #409eff;
     transition: all .3s;
   }
 
