@@ -23,6 +23,7 @@ module.exports = {
                     '/components/layout',
                     '/components/grid',
                     '/components/tabs',
+                    '/components/popover',
 
                 ],
             }
