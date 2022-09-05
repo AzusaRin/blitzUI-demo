@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Toast-轻提示 | BlitzUI</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="一款简洁的 Vue UI 组件">
+    
+    <link rel="preload" href="/blitzUI-demo/assets/css/0.styles.37af4f5f.css" as="style"><link rel="preload" href="/blitzUI-demo/assets/js/app.27ea24d0.js" as="script"><link rel="preload" href="/blitzUI-demo/assets/js/6.bb09f7c9.js" as="script"><link rel="preload" href="/blitzUI-demo/assets/js/45.77968ea3.js" as="script"><link rel="preload" href="/blitzUI-demo/assets/js/8.9927dfa0.js" as="script"><link rel="preload" href="/blitzUI-demo/assets/js/9.1ac63f94.js" as="script"><link rel="preload" href="/blitzUI-demo/assets/js/10.2bff890f.js" as="script"><link rel="preload" href="/blitzUI-demo/assets/js/11.219a0f06.js" as="script"><link rel="prefetch" href="/blitzUI-demo/assets/js/1.e430fffd.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/12.a961461b.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/13.398bd30a.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/14.3b9f7464.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/15.3dbc17d2.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/16.f18329cf.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/17.08fd9c21.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/18.9e7b4af1.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/19.accf9f12.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/2.ce407bd0.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/20.ac027854.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/21.8db6b414.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/22.4bc2fddd.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/23.6059fc29.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/24.f3557089.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/25.ca29c863.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/26.9d6279e9.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/27.36250c16.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/28.07ba818d.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/29.67335119.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/3.39907e5d.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/30.ea83cd8c.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/31.a2ff5ae9.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/32.294e012d.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/33.687bdf95.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/34.ff7c89b1.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/35.b9bc1ae6.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/36.927efbf2.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/37.7b6d9fb2.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/38.6d57386d.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/39.d9529adc.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/4.02fac531.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/40.599b2691.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/41.0eb488fe.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/42.7a3d2222.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/43.850e212a.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/44.2f42eeac.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/46.d58948d8.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/47.ec525cf4.js"><link rel="prefetch" href="/blitzUI-demo/assets/js/7.27420639.js">
+    <link rel="stylesheet" href="/blitzUI-demo/assets/css/0.styles.37af4f5f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blitzUI-demo/" class="home-link router-link-active"><!----> <span class="site-name">BlitzUI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blitzUI-demo/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blitzUI-demo/getStart/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Links" class="dropdown-title"><span class="title">相关链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="Links" class="mobile-dropdown-title"><span class="title">相关链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/AzusaRin/blitzUI-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github仓库
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/163177786258141" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人掘金博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blitzUI-demo/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blitzUI-demo/getStart/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Links" class="dropdown-title"><span class="title">相关链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="Links" class="mobile-dropdown-title"><span class="title">相关链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/AzusaRin/blitzUI-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github仓库
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/163177786258141" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人掘金博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>入门配置</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>组件</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blitzUI-demo/components/button.html" class="sidebar-link">Button-按钮</a></li><li><a href="/blitzUI-demo/components/input.html" class="sidebar-link">Input-输入框</a></li><li><a href="/blitzUI-demo/components/layout.html" class="sidebar-link">Layout-默认布局容器</a></li><li><a href="/blitzUI-demo/components/grid.html" class="sidebar-link">Grid-栅格布局容器</a></li><li><a href="/blitzUI-demo/components/tabs.html" class="sidebar-link">Tabs-标签页</a></li><li><a href="/blitzUI-demo/components/popover.html" class="sidebar-link">Popover-弹出框</a></li><li><a href="/blitzUI-demo/components/toast.html" aria-current="page" class="active sidebar-link">Toast-轻提示</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blitzUI-demo/components/toast.html#基础提示" class="sidebar-link">基础提示</a></li><li class="sidebar-sub-header"><a href="/blitzUI-demo/components/toast.html#有关闭按钮的提示" class="sidebar-link">有关闭按钮的提示</a></li><li class="sidebar-sub-header"><a href="/blitzUI-demo/components/toast.html#可设置自动关闭的时间" class="sidebar-link">可设置自动关闭的时间</a></li><li class="sidebar-sub-header"><a href="/blitzUI-demo/components/toast.html#可设置提示内容为html内容" class="sidebar-link">可设置提示内容为HTML内容</a></li><li class="sidebar-sub-header"><a href="/blitzUI-demo/components/toast.html#toast-attributes" class="sidebar-link">Toast Attributes</a></li></ul></li><li><a href="/blitzUI-demo/components/collapse.html" class="sidebar-link">Collapse-折叠面板</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="轻提示"><a href="#轻提示" class="header-anchor">#</a> 轻提示</h1> <p>在页面上中下弹出蓝色提示，用于消息通知、加载提示、操作结果提示等场景。</p> <h3 id="如何使用"><a href="#如何使用" class="header-anchor">#</a> 如何使用</h3> <div class="custom-block tip"><p class="custom-block-title">引入</p> <p>本组件引入和其他组件稍有不同，请参考以下代码。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'blitz-ui-demo/dist/index.css'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> toastPlugin <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;blitz-ui-demo&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Toast <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;blitz-ui-demo&quot;</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>toastPlugin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <hr> <h2 id="基础提示"><a href="#基础提示" class="header-anchor">#</a> 基础提示</h2> <div class="all-wrapper" data-v-68e0ee9e><div class="input-wrapper" data-v-68e0ee9e><div class="input" data-v-68e0ee9e><div class="wrapper" data-v-68e0ee9e><bl-button data-v-68e0ee9e>上方Toast</bl-button> <bl-button data-v-68e0ee9e>中间Toast</bl-button> <bl-button data-v-68e0ee9e>下方Toast</bl-button></div> <div class="info" data-v-68e0ee9e><span data-v-68e0ee9e>最基础的点击组件显示Toast,可在方法里传入<code data-v-68e0ee9e>position</code>属性修改Toast位置，默认为视窗上端。默认五秒之后自动关闭。</span></div></div> <div class="code" data-v-68e0ee9e><div data-v-68e0ee9e><pre class="language-javascript"><code><pre data-v-68e0ee9e><code data-v-68e0ee9e>
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;bl-button @click=&quot;showToastTop&quot;&gt;上方Toast&lt;/bl-button&gt;
+  &lt;bl-button @click=&quot;showToastMiddle&quot;&gt;中间Toast&lt;/bl-button&gt;
+  &lt;bl-button @click=&quot;showToastBottom&quot;&gt;下方Toast&lt;/bl-button&gt;
+&lt;/div&gt;
+
+
+import Vue from &quot;vue&quot;;
+import {  toastPlugin  } from &quot;blitz-ui-demo&quot;;
+import {  Toast  } from &quot;blitz-ui-demo&quot;;
+import {  Button  } from &quot;blitz-ui-demo&quot;;
+
+
+
+export default {
+  methods: {
+    showToastTop() {
+      this.$toast('提示内容')
+    },
+    showToastMiddle() {
+      this.$toast('提示内容',{position:'middle'})
+    },
+    showToastBottom() {
+      this.$toast('提示内容',{position:'bottom'})
+    },
+  }
+}
+
+</code></pre></code></pre></div></div></div></div> <hr> <h2 id="有关闭按钮的提示"><a href="#有关闭按钮的提示" class="header-anchor">#</a> 有关闭按钮的提示</h2> <div class="all-wrapper" data-v-3e41e69d><div class="input-wrapper" data-v-3e41e69d><div class="input" data-v-3e41e69d><div class="wrapper" data-v-3e41e69d><bl-button data-v-3e41e69d>带关闭按钮的Toast</bl-button></div> <div class="info" data-v-3e41e69d><span data-v-3e41e69d>带有关闭按钮的Toast,可在方法里传入带有回调函数的<code data-v-3e41e69d>closeButton</code>对象来调用。默认五秒之后自动关闭。</span></div></div> <div class="code" data-v-3e41e69d><div data-v-3e41e69d><pre class="language-javascript"><code><pre data-v-3e41e69d><code data-v-3e41e69d>
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;bl-button @click=&quot;showToast&quot;&gt;带关闭按钮的Toast&lt;/bl-button&gt;
+&lt;/div&gt;
+
+
+import Vue from &quot;vue&quot;;
+import {  toastPlugin  } from &quot;blitz-ui-demo&quot;;
+import {  Toast  } from &quot;blitz-ui-demo&quot;;
+import {  Button  } from &quot;blitz-ui-demo&quot;;
+
+
+
+export default {
+  methods: {
+    showToast() {
+      this.$toast('提示内容', {
+        closeButton: {
+          callback: () =&gt; {
+            console.log('回调函数的输出');
+          }
+        }
+      })
+    }
+  }
+}
+
+</code></pre></code></pre></div></div></div></div> <hr> <h2 id="可设置自动关闭的时间"><a href="#可设置自动关闭的时间" class="header-anchor">#</a> 可设置自动关闭的时间</h2> <div class="all-wrapper" data-v-6ff5a6b1><div class="input-wrapper" data-v-6ff5a6b1><div class="input" data-v-6ff5a6b1><div class="wrapper" data-v-6ff5a6b1><bl-button data-v-6ff5a6b1>可修改自动关闭时间的Toast</bl-button></div> <div class="info" data-v-6ff5a6b1><span data-v-6ff5a6b1>可修改Toast的自动关闭时间,可在方法里传入<code data-v-6ff5a6b1>autoClose</code>属性来调用。可设置为false，取消自动关闭。默认五秒之后自动关闭。</span></div></div> <div class="code" data-v-6ff5a6b1><div data-v-6ff5a6b1><pre class="language-javascript"><code><pre data-v-6ff5a6b1><code data-v-6ff5a6b1>
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;bl-button @click=&quot;showToast&quot;&gt;可修改自动关闭时间的Toast&lt;/bl-button&gt;
+&lt;/div&gt;
+
+
+import Vue from &quot;vue&quot;;
+import {  toastPlugin  } from &quot;blitz-ui-demo&quot;;
+import {  Toast  } from &quot;blitz-ui-demo&quot;;
+import {  Button  } from &quot;blitz-ui-demo&quot;;
+
+
+
+export default {
+  methods: {
+    showToast() {
+      this.$toast('本提示将会在两秒后关闭', {autoClose:2})
+    }
+  }
+}
+
+</code></pre></code></pre></div></div></div></div> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><code>autoClose</code>只可设置为数字或false，不可设置为true。</p></div> <hr> <h2 id="可设置提示内容为html内容"><a href="#可设置提示内容为html内容" class="header-anchor">#</a> 可设置提示内容为HTML内容</h2> <div class="all-wrapper" data-v-272dce7c><div class="input-wrapper" data-v-272dce7c><div class="input" data-v-272dce7c><div class="wrapper" data-v-272dce7c><bl-button data-v-272dce7c>博客主页</bl-button></div> <div class="info" data-v-272dce7c><span data-v-272dce7c>可让Toast显示HTML内容,可在方法里传入<code data-v-272dce7c>enableHtml:true</code>属性来调用。默认五秒之后自动关闭。</span></div></div> <div class="code" data-v-272dce7c><div data-v-272dce7c><pre class="language-javascript"><code><pre data-v-272dce7c><code data-v-272dce7c>
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;bl-button @click=&quot;showToast&quot;&gt;博客主页&lt;/bl-button&gt;
+&lt;/div&gt;
+
+
+import Vue from &quot;vue&quot;;
+import {  toastPlugin  } from &quot;blitz-ui-demo&quot;;
+import {  Toast  } from &quot;blitz-ui-demo&quot;;
+import {  Button  } from &quot;blitz-ui-demo&quot;;
+
+
+
+export default {
+  methods: {
+    showToast() {
+      this.$toast(
+      '&lt;a href=&quot;https://juejin.cn/user/163177786258141&quot;&gt;点击打开AzusaRin的博客主页&lt;/a&gt;',
+      {enableHtml:true}
+      )
+    }
+  }
+}
+
+</code></pre></code></pre></div></div></div></div> <hr> <h2 id="toast-attributes"><a href="#toast-attributes" class="header-anchor">#</a> Toast Attributes</h2> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th style="text-align:center;">默认值</th></tr></thead> <tbody><tr><td>position</td> <td>确定Toast的位置</td> <td>String</td> <td>'top', 'middle', 'bottom'</td> <td style="text-align:center;">'top'</td></tr> <tr><td>closeButton</td> <td>Toast带有关闭按钮，需回调函数</td> <td>Object</td> <td>—</td> <td style="text-align:center;">—</td></tr> <tr><td>autoClose</td> <td>Toast自动关闭的开关，或者时间</td> <td>Boolean, Number</td> <td>number/false</td> <td style="text-align:center;">5</td></tr> <tr><td>enableHtml</td> <td>决定Toast是否能表示HTML内容</td> <td>Boolean</td> <td>—</td> <td style="text-align:center;">false</td></tr></tbody></table></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">9/1/2022, 9:29:41 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blitzUI-demo/components/popover.html" class="prev">
+        Popover-弹出框
+      </a></span> <span class="next"><a href="/blitzUI-demo/components/collapse.html">
+        Collapse-折叠面板
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blitzUI-demo/assets/js/app.27ea24d0.js" defer></script><script src="/blitzUI-demo/assets/js/6.bb09f7c9.js" defer></script><script src="/blitzUI-demo/assets/js/45.77968ea3.js" defer></script><script src="/blitzUI-demo/assets/js/8.9927dfa0.js" defer></script><script src="/blitzUI-demo/assets/js/9.1ac63f94.js" defer></script><script src="/blitzUI-demo/assets/js/10.2bff890f.js" defer></script><script src="/blitzUI-demo/assets/js/11.219a0f06.js" defer></script>
+  </body>
+</html>
