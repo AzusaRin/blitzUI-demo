@@ -10,9 +10,6 @@ title:install
 
 ## NPM 安装
 
-::: tip 推荐
-推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
-:::
 
 ```angular2html
 npm install blitz-ui-demo

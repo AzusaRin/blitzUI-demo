@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Popover-弹出框 | BlitzUI</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="一款简洁的 Vue UI 组件">
+    
+    <link rel="preload" href="/assets/css/0.styles.b7524e8e.css" as="style"><link rel="preload" href="/assets/js/app.bad6b549.js" as="script"><link rel="preload" href="/assets/js/6.bb09f7c9.js" as="script"><link rel="preload" href="/assets/js/43.fcb1a046.js" as="script"><link rel="preload" href="/assets/js/12.a961461b.js" as="script"><link rel="preload" href="/assets/js/13.8de7314b.js" as="script"><link rel="prefetch" href="/assets/js/1.e430fffd.js"><link rel="prefetch" href="/assets/js/10.ffdade68.js"><link rel="prefetch" href="/assets/js/11.8aa81d2e.js"><link rel="prefetch" href="/assets/js/14.01eb107f.js"><link rel="prefetch" href="/assets/js/15.3dbc17d2.js"><link rel="prefetch" href="/assets/js/16.1bd5b20b.js"><link rel="prefetch" href="/assets/js/17.87a3db10.js"><link rel="prefetch" href="/assets/js/18.a9ab28be.js"><link rel="prefetch" href="/assets/js/19.e2ad1362.js"><link rel="prefetch" href="/assets/js/2.8a39e1ca.js"><link rel="prefetch" href="/assets/js/20.b939e816.js"><link rel="prefetch" href="/assets/js/21.4131d783.js"><link rel="prefetch" href="/assets/js/22.d97ffb20.js"><link rel="prefetch" href="/assets/js/23.85bf5e1a.js"><link rel="prefetch" href="/assets/js/24.61f31df7.js"><link rel="prefetch" href="/assets/js/25.7c9a66d9.js"><link rel="prefetch" href="/assets/js/26.aeeb83a6.js"><link rel="prefetch" href="/assets/js/27.4c5695d9.js"><link rel="prefetch" href="/assets/js/28.7e370ec9.js"><link rel="prefetch" href="/assets/js/29.7921c15e.js"><link rel="prefetch" href="/assets/js/3.c8627723.js"><link rel="prefetch" href="/assets/js/30.bb1b3bcd.js"><link rel="prefetch" href="/assets/js/31.a2ff5ae9.js"><link rel="prefetch" href="/assets/js/32.294e012d.js"><link rel="prefetch" href="/assets/js/33.687bdf95.js"><link rel="prefetch" href="/assets/js/34.ff7c89b1.js"><link rel="prefetch" href="/assets/js/35.b9bc1ae6.js"><link rel="prefetch" href="/assets/js/36.927efbf2.js"><link rel="prefetch" href="/assets/js/37.0ffc298e.js"><link rel="prefetch" href="/assets/js/38.0dff1597.js"><link rel="prefetch" href="/assets/js/39.ae2786a8.js"><link rel="prefetch" href="/assets/js/4.06a0f054.js"><link rel="prefetch" href="/assets/js/40.8b7ab57f.js"><link rel="prefetch" href="/assets/js/41.54598627.js"><link rel="prefetch" href="/assets/js/42.97544c6c.js"><link rel="prefetch" href="/assets/js/44.f2ab2b06.js"><link rel="prefetch" href="/assets/js/45.b1cdec8c.js"><link rel="prefetch" href="/assets/js/46.20934d1e.js"><link rel="prefetch" href="/assets/js/47.829476ba.js"><link rel="prefetch" href="/assets/js/7.9b9573f9.js"><link rel="prefetch" href="/assets/js/8.becb1b8f.js"><link rel="prefetch" href="/assets/js/9.c429e1dc.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b7524e8e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">BlitzUI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/getStart/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Links" class="dropdown-title"><span class="title">链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="Links" class="mobile-dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/AzusaRin/blitzUI-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github仓库
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/163177786258141" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人掘金博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/getStart/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Links" class="dropdown-title"><span class="title">链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="Links" class="mobile-dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/AzusaRin/blitzUI-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github仓库
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/163177786258141" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人掘金博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>入门配置</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>组件</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/components/button.html" class="sidebar-link">Button-按钮</a></li><li><a href="/components/input.html" class="sidebar-link">Input-输入框</a></li><li><a href="/components/layout.html" class="sidebar-link">Layout-默认布局容器</a></li><li><a href="/components/grid.html" class="sidebar-link">Grid-栅格布局容器</a></li><li><a href="/components/tabs.html" class="sidebar-link">Tabs-标签页</a></li><li><a href="/components/popover.html" aria-current="page" class="active sidebar-link">Popover-弹出框</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/components/popover.html#click用法" class="sidebar-link">Click用法</a></li><li class="sidebar-sub-header"><a href="/components/popover.html#hover用法" class="sidebar-link">Hover用法</a></li><li class="sidebar-sub-header"><a href="/components/popover.html#popover-attributes" class="sidebar-link">Popover Attributes</a></li><li class="sidebar-sub-header"><a href="/components/popover.html#slot" class="sidebar-link">Slot</a></li></ul></li><li><a href="/components/toast.html" class="sidebar-link">Toast-轻提示</a></li><li><a href="/components/collapse.html" class="sidebar-link">Collapse-折叠面板</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="弹出框"><a href="#弹出框" class="header-anchor">#</a> 弹出框</h1> <p>可以输入字符。</p> <h3 id="如何使用"><a href="#如何使用" class="header-anchor">#</a> 如何使用</h3> <hr> <h2 id="click用法"><a href="#click用法" class="header-anchor">#</a> Click用法</h2> <div class="all-wrapper" data-v-3048ce65><div class="input-wrapper" data-v-3048ce65><div class="input" data-v-3048ce65><div class="wrapper" data-v-3048ce65><div class="popover" data-v-34168254 data-v-3048ce65><!----> <span class="switchWrapper" data-v-34168254> <bl-button data-v-34168254 data-v-3048ce65>点击，左方显示内容</bl-button></span></div> <div class="popover" data-v-34168254 data-v-3048ce65><!----> <span class="switchWrapper" data-v-34168254> <bl-button data-v-34168254 data-v-3048ce65>点击，上方显示内容</bl-button></span></div> <div class="popover" data-v-34168254 data-v-3048ce65><!----> <span class="switchWrapper" data-v-34168254> <bl-button data-v-34168254 data-v-3048ce65>点击，下方显示内容</bl-button></span></div> <div class="popover" data-v-34168254 data-v-3048ce65><!----> <span class="switchWrapper" data-v-34168254> <bl-button data-v-34168254 data-v-3048ce65>点击，右方显示内容</bl-button></span></div></div></div> <div class="info" data-v-3048ce65><span data-v-3048ce65>最基础的点击显示弹出框,使用<code data-v-3048ce65>position</code>属性控制弹出框位置，点击触发组件本身或是点击外部即可关闭。</span></div></div> <div class="code" data-v-3048ce65><div data-v-3048ce65><pre class="language-javascript"><code><pre data-v-3048ce65><code data-v-3048ce65>
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;bl-popover position=&quot;left&quot;&gt;
+    &lt;template slot=&quot;content&quot;&gt;
+              这是内容，这是内容，这是内容。
+              这是内容，这是内容，这是内容。
+    &lt;/template&gt;
+    &lt;bl-button&gt;点击，左方显示内容&lt;/bl-button&gt;
+  &lt;/bl-popover&gt;
+  &lt;bl-popover position=&quot;top&quot;&gt;
+    &lt;template slot=&quot;content&quot;&gt;
+              这是内容，这是内容，这是内容。
+              这是内容，这是内容，这是内容。
+    &lt;/template&gt;
+    &lt;bl-button&gt;点击，上方显示内容&lt;/bl-button&gt;
+  &lt;/bl-popover&gt;
+  &lt;bl-popover position=&quot;bottom&quot;&gt;
+    &lt;template slot=&quot;content&quot;&gt;
+              这是内容，这是内容，这是内容。
+              这是内容，这是内容，这是内容。
+    &lt;/template&gt;
+    &lt;bl-button&gt;点击，下方显示内容&lt;/bl-button&gt;
+  &lt;/bl-popover&gt;
+  &lt;bl-popover position=&quot;right&quot;&gt;
+    &lt;template slot=&quot;content&quot;&gt;
+              这是内容，这是内容，这是内容。
+              这是内容，这是内容，这是内容。
+    &lt;/template&gt;
+    &lt;bl-button&gt;点击，右方显示内容&lt;/bl-button&gt;
+  &lt;/bl-popover&gt;
+&lt;/div&gt;
+      </code></pre></code></pre></div></div></div> <hr> <h2 id="hover用法"><a href="#hover用法" class="header-anchor">#</a> Hover用法</h2> <div class="all-wrapper" data-v-44af48ce><div class="input-wrapper" data-v-44af48ce><div class="input" data-v-44af48ce><div class="wrapper" data-v-44af48ce><div class="popover" data-v-34168254 data-v-44af48ce><!----> <span class="switchWrapper" data-v-34168254> <bl-button data-v-34168254 data-v-44af48ce>移入，左方显示内容</bl-button></span></div> <div class="popover" data-v-34168254 data-v-44af48ce><!----> <span class="switchWrapper" data-v-34168254> <bl-button data-v-34168254 data-v-44af48ce>移入，上方显示内容</bl-button></span></div> <div class="popover" data-v-34168254 data-v-44af48ce><!----> <span class="switchWrapper" data-v-34168254> <bl-button data-v-34168254 data-v-44af48ce>移入，下方显示内容</bl-button></span></div> <div class="popover" data-v-34168254 data-v-44af48ce><!----> <span class="switchWrapper" data-v-34168254> <bl-button data-v-34168254 data-v-44af48ce>移入，右方显示内容</bl-button></span></div></div></div> <div class="info" data-v-44af48ce><span data-v-44af48ce>鼠标的移入移出控制弹出框的出现，使用<code data-v-44af48ce>trigger</code>属性选择是否为hover打开。</span></div></div> <div class="code" data-v-44af48ce><div data-v-44af48ce><pre class="language-javascript"><code><pre data-v-44af48ce><code data-v-44af48ce>
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;bl-popover position=&quot;left&quot; trigger=&quot;hover&quot;&gt;
+    &lt;template slot=&quot;content&quot;&gt;
+              这是内容，这是内容，这是内容。
+              这是内容，这是内容，这是内容。
+    &lt;/template&gt;
+    &lt;bl-button&gt;移入，左方显示内容&lt;/bl-button&gt;
+  &lt;/bl-popover&gt;
+  &lt;bl-popover position=&quot;top&quot; trigger=&quot;hover&quot;&gt;
+    &lt;template slot=&quot;content&quot;&gt;
+              这是内容，这是内容，这是内容。
+              这是内容，这是内容，这是内容。
+    &lt;/template&gt;
+    &lt;bl-button&gt;移入，上方显示内容&lt;/bl-button&gt;
+  &lt;/bl-popover&gt;
+  &lt;bl-popover position=&quot;bottom&quot; trigger=&quot;hover&quot;&gt;
+    &lt;template slot=&quot;content&quot;&gt;
+              这是内容，这是内容，这是内容。
+              这是内容，这是内容，这是内容。
+    &lt;/template&gt;
+    &lt;bl-button&gt;移入，下方显示内容&lt;/bl-button&gt;
+  &lt;/bl-popover&gt;
+  &lt;bl-popover position=&quot;right&quot; trigger=&quot;hover&quot;&gt;
+    &lt;template slot=&quot;content&quot;&gt;
+              这是内容，这是内容，这是内容。
+              这是内容，这是内容，这是内容。
+    &lt;/template&gt;
+    &lt;bl-button&gt;移入，右方显示内容&lt;/bl-button&gt;
+  &lt;/bl-popover&gt;
+&lt;/div&gt;
+      </code></pre></code></pre></div></div></div> <hr> <h2 id="popover-attributes"><a href="#popover-attributes" class="header-anchor">#</a> Popover Attributes</h2> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th style="text-align:center;">默认值</th></tr></thead> <tbody><tr><td>trigger</td> <td>触发方式</td> <td>String</td> <td>'click', 'hover'</td> <td style="text-align:center;">'click'</td></tr> <tr><td>position</td> <td>出现位置</td> <td>String</td> <td>'top', 'left', 'right', 'bottom'</td> <td style="text-align:center;">'top'</td></tr></tbody></table> <hr> <h2 id="slot"><a href="#slot" class="header-anchor">#</a> Slot</h2> <table><thead><tr><th style="text-align:center;">参数</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:center;">—</td> <td>触发 Popover 显示的元素</td></tr> <tr><td style="text-align:center;">content</td> <td>popover内部显示的内容</td></tr></tbody></table></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">9/1/2022, 4:36:33 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/components/tabs.html" class="prev">
+        Tabs-标签页
+      </a></span> <span class="next"><a href="/components/toast.html">
+        Toast-轻提示
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.bad6b549.js" defer></script><script src="/assets/js/6.bb09f7c9.js" defer></script><script src="/assets/js/43.fcb1a046.js" defer></script><script src="/assets/js/12.a961461b.js" defer></script><script src="/assets/js/13.8de7314b.js" defer></script>
+  </body>
+</html>

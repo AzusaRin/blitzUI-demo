@@ -1,3 +1,7 @@
+![GitHub](https://img.shields.io/github/license/AzusaRin/blitzUI-demo)
+![npm](https://img.shields.io/npm/dt/blitz-ui-demo)
+![npm](https://img.shields.io/npm/v/blitz-ui-demo)
+
 # BlitzUI      一款Vue框架使用的UI组件
 
 

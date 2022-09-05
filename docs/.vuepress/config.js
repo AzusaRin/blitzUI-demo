@@ -1,6 +1,6 @@
 module.exports = {
     title: 'BlitzUI',
-    description: '一款轻量的 Vue UI 组件',
+    description: '一款简洁的 Vue UI 组件',
     themeConfig: {
         lastUpdated: 'Last Updated',
         smoothScroll: true,

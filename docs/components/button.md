@@ -12,7 +12,11 @@ title: Button-按钮
 
 ## 基础按钮
 
+<ClientOnly>
+
 <button-demo1></button-demo1>
+
+</ClientOnly>
 
 ---
 
@@ -20,7 +24,9 @@ title: Button-按钮
 
 
 
+<ClientOnly>
 <button-demo2></button-demo2>
+</ClientOnly>
 
 ::: warning
 请注意```bl-button-group``` 的子元素只能是```bl-button```，否则可能会发生样式错误。
@@ -29,13 +35,17 @@ title: Button-按钮
 
 ## 加载按钮
 
+<ClientOnly>
 <button-demo3></button-demo3>
+</ClientOnly>
 
 ---
 
 ## 禁用状态
 
+<ClientOnly>
 <button-demo4></button-demo4>
+</ClientOnly>
 
 ---
 

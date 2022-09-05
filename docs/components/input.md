@@ -10,30 +10,45 @@ title: Input-输入框
 ---
 
 ## 基础用法
+
+<ClientOnly>
 <input-demo1></input-demo1>
+</ClientOnly>
 
 ---
 
 ## 设置placeholder
+
+<ClientOnly>
 <input-demo2></input-demo2>
+</ClientOnly>
 
 
 ---
 
 ## 只读状态
+
+<ClientOnly>
 <input-demo3></input-demo3>
+</ClientOnly>
 
 ---
 
 
 ## 禁用状态
+
+<ClientOnly>
 <input-demo4></input-demo4>
+</ClientOnly>
 
 ---
 
 
 ## 错误提示
+
+<ClientOnly>
 <input-demo5></input-demo5>
+</ClientOnly>
 
 ---
 
