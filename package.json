@@ -1,6 +1,6 @@
 {
   "name": "blitz-ui-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "一款简洁好用的Vue UI组件",
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   ],
 
   "files": [
-    "dist"
+    "dist/*"
   ],
   "author": "AzusaRin",
   "license": "MIT",

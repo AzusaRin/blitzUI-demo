@@ -10,14 +10,21 @@ title: Popover-弹出框
 ---
 
 ## Click用法
+
+<ClientOnly>
+
 <popover-demo1></popover-demo1>
 
+</ClientOnly>
 
 ---
 
 ## Hover用法
-<popover-demo2></popover-demo2>
 
+
+<ClientOnly>
+<popover-demo2></popover-demo2>
+</ClientOnly>
 
 ---
 

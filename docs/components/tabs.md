@@ -15,7 +15,11 @@ title: Tabs-标签页
 ---
 
 ## 简洁样式
+<ClientOnly>
+
 <tabs-demo></tabs-demo>
+
+</ClientOnly>
 
 ---
 

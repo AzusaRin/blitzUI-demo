@@ -24,9 +24,10 @@
 npm install --save blitz-ui-demo
 ```
 
-3. 引入blitzUI全部组件
+3. 引入blitzUI全部组件，或按需引入。
 
 ```js
+import 'blitz-ui-demo/dist/index.css'
 import {
     Button,
     ButtonGroup,
@@ -84,6 +85,8 @@ export default {
 ```
 
 ## 文档
+
+https://azusarin.github.io/blitzUI-demo/
 
 ## 提问
 

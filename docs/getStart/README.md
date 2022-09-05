@@ -12,6 +12,7 @@ title:getStart
 
 ```js
 import { Button } from "blitz-ui-demo";
+import 'blitz-ui-demo/dist/index.css'
 ```
 
 ## 注册组件

@@ -1,4 +1,5 @@
 module.exports = {
+    base:'/blitzUI-demo/',
     title: 'BlitzUI',
     description: '一款简洁的 Vue UI 组件',
     themeConfig: {
@@ -8,7 +9,7 @@ module.exports = {
             { text: '主页', link: '/' },
             { text: '文档', link: '/getStart/' },
             {
-                text: '链接',
+                text: '相关链接',
                 ariaLabel: 'Links',
                 items: [
                     { text: 'Github仓库', link: 'https://github.com/AzusaRin/blitzUI-demo' },
